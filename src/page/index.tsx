@@ -8,6 +8,7 @@ import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 import NavLink from 'react-bootstrap/NavLink';
 
 import { HomePage } from './Home';
+import { ComponentPage } from './Component';
 
 export function PageFrame() {
     return (
@@ -26,6 +27,9 @@ export function PageFrame() {
                     <NavLink className="text-white" href="#/">
                         Home
                     </NavLink>
+                    <NavLink className="text-white" href="#/component">
+                        Component
+                    </NavLink>
                     <NavLink
                         className="text-white"
                         href="https://github.com/TechQuery/React-MobX-Bootstrap-ts"
@@ -37,8 +41,11 @@ export function PageFrame() {
 
             <HashRouter>
                 <Switch>
-                    <Route path="/">
+                    <Route exact path="/">
                         <HomePage />
+                    </Route>
+                    <Route path="/component">
+                        <ComponentPage />
                     </Route>
                 </Switch>
             </HashRouter>

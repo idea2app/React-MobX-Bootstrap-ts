@@ -66,7 +66,7 @@ export class HomePage extends PureComponent {
         const { list } = project;
 
         return (
-            <Container>
+            <Container fluid="md">
                 <h1 className="my-4">Upstream projects</h1>
 
                 <Row>{list.map(this.renderProject)}</Row>
