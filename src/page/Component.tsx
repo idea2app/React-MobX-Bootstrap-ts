@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
-import { Editor, OriginalTools } from 'react-bootstrap-editor/source';
+import { Editor, OriginalTools } from 'react-bootstrap-editor';
 
 import { Icon } from '../component/Icon';
 import { TimeDistance } from '../component/TimeDistance';

@@ -5,6 +5,7 @@ dist/
 package-lock.json
 node_modules/
 *.log
+.husky/_/
 
 # OS generated files
 .DS_Store

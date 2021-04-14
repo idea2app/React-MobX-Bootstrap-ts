@@ -19,6 +19,13 @@ which is inspired by [WebCell scaffold][5].
 -   Package bundler: [Parcel v1][11]
 -   CI / CD: GitHub [Actions][12] + [Pages][13]
 
+## Extra components
+
+1. [Icon](src/component/Icon.tsx)
+2. [Time distance](src/component/TimeDistance.tsx)
+3. [Nameplate](src/component/Nameplate.tsx)
+4. [Table spinner](src/component/TableSpinner.tsx)
+
 ## Development
 
 ```shell
