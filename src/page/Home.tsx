@@ -8,7 +8,7 @@ import Card from 'react-bootstrap/Card';
 import CardImg from 'react-bootstrap/CardImg';
 import Button from 'react-bootstrap/Button';
 
-import project, { Repository } from '../model/Project';
+import project, { Project } from '../model/Project';
 
 @observer
 export class HomePage extends PureComponent {
@@ -25,17 +25,14 @@ export class HomePage extends PureComponent {
     renderProject = ({
         id,
         name,
-        full_name,
+        logo,
         description,
         homepage,
         html_url
-    }: Repository) => (
+    }: Project) => (
         <Col className="mb-3" xs={12} sm={6} md={3} key={id}>
             <Card className="h-100">
-                <CardImg
-                    variant="top"
-                    src={`https://github.com/${full_name.split('/')[0]}.png`}
-                />
+                <CardImg variant="top" src={logo} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{description}</Card.Text>

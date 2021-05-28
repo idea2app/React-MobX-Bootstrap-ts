@@ -32,7 +32,7 @@ export function PageFrame() {
                     </NavLink>
                     <NavLink
                         className="text-white"
-                        href="https://github.com/TechQuery/React-MobX-Bootstrap-ts"
+                        href="https://github.com/idea2app/React-MobX-Bootstrap-ts"
                     >
                         Source code
                     </NavLink>
