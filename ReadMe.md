@@ -16,7 +16,7 @@ which is inspired by [WebCell scaffold][5].
 -   Component suite: [React Bootstrap v1][8]
 -   HTTP Client: [KoAJAX][9]
 -   PWA framework: [Workbox v6][10]
--   Package bundler: [Parcel v1][11]
+-   Package bundler: [Parcel v2][11]
 -   CI / CD: GitHub [Actions][12] + [Pages][13]
 
 ## Extra components
