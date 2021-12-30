@@ -1,4 +1,4 @@
-import React, { PropsWithoutRef } from 'react';
+import type { PropsWithoutRef } from 'react';
 import Spinner from 'react-bootstrap/Spinner';
 
 export function TableSpinner({
