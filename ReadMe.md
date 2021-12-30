@@ -11,9 +11,9 @@ which is inspired by [WebCell scaffold][5].
 ## Technology stack
 
 -   Language: [TypeScript v4][2]
--   Component engine: [React 16][1]
+-   Component engine: [React 17][1]
 -   State management: [MobX v5][3]
--   Component suite: [React Bootstrap v1][8]
+-   Component suite: [React Bootstrap v2][8]
 -   HTTP Client: [KoAJAX][9]
 -   PWA framework: [Workbox v6][10]
 -   Package bundler: [Parcel v2][11]
@@ -21,11 +21,10 @@ which is inspired by [WebCell scaffold][5].
 
 ## Extra components
 
-1. [Icon](src/component/Icon.tsx)
-2. [Time distance](src/component/TimeDistance.tsx)
-3. [Nameplate](src/component/Nameplate.tsx)
-4. [Table spinner](src/component/TableSpinner.tsx)
-5. [Rich-text editor][14]
+1. [Table spinner](src/component/TableSpinner.tsx)
+2. Rich-text editor
+    - [HTML version][14]
+    - [JSON version](src/component/Editor.tsx)
 
 ## Development
 

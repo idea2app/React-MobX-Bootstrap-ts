@@ -1,6 +1,5 @@
 import { auto } from 'browser-unhandled-rejection';
 import { serviceWorkerUpdate } from 'web-utility';
-import React from 'react';
 import { render } from 'react-dom';
 
 import { PageFrame } from './page';

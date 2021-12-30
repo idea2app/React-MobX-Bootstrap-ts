@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import { PureComponent } from 'react';
 import { observer } from 'mobx-react';
 
 import Container from 'react-bootstrap/Container';
