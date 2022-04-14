@@ -1,8 +1,8 @@
-import Container from 'react-bootstrap/Container';
-import Table from 'react-bootstrap/Table';
-import { Editor, OriginalTools } from 'react-bootstrap-editor';
+import { Container, Table } from 'react-bootstrap';
+import { Editor } from 'react-bootstrap-editor';
 import {
     TimeDistance,
+    TableSpinner,
     PaginationBar,
     Icon,
     Avatar,
@@ -12,9 +12,11 @@ import {
     EditorHTML
 } from 'idea-react';
 
-import { TableSpinner } from '../component/TableSpinner';
+import { TSXSample } from '../component/TSXSample';
 import EditorJS from '../component/Editor';
 import RichEditData from '../model/rich-edit.json';
+
+Table.displayName = 'Table';
 
 export function ComponentPage() {
     const content = JSON.stringify(RichEditData);
@@ -23,56 +25,69 @@ export function ComponentPage() {
         <Container className="my-3" fluid="md">
             <h1>Extra components</h1>
 
-            <h2 className="mt-3">Time Distance</h2>
-            <TimeDistance date="1989-06-04" />
+            <TSXSample title="Time Distance">
+                <TimeDistance date="1989-06-04" />
+            </TSXSample>
 
-            <h2 className="mt-3">Pagination Bar</h2>
-            <PaginationBar
-                pathResolver={index => `/test?page=${index}`}
-                total={10}
-                current={5}
-            />
-            <h2 className="mt-3">Icon</h2>
-            <Icon name="bootstrap" size={2} />
+            <TSXSample title="Pagination Bar">
+                <PaginationBar
+                    className="my-3 justify-content-end"
+                    size="sm"
+                    count={42}
+                    pageCount={5}
+                    currentPage={1}
+                    onChange={console.log}
+                />
+            </TSXSample>
 
-            <h2 className="mt-3">Avatar</h2>
-            <Avatar src="https://github.com/idea2app.png" />
+            <TSXSample title="Icon">
+                <Icon name="bootstrap" size={2} />
+            </TSXSample>
 
-            <h2 className="mt-3">Nameplate</h2>
-            <Nameplate
-                name="idea2app"
-                avatar="https://github.com/idea2app.png"
-            />
-            <h2 className="mt-3">Table spinner</h2>
-            <Table className="text-center" striped hover>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Content</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <TableSpinner colSpan={2} />
-                </tbody>
-            </Table>
+            <TSXSample title="Avatar">
+                <Avatar src="https://github.com/idea2app.png" />
+            </TSXSample>
 
-            <h2 className="mt-3">Filter Input</h2>
-            <FilterInput name="tags" />
+            <TSXSample title="Nameplate">
+                <Nameplate
+                    avatar="https://github.com/idea2app.png"
+                    name="idea2app"
+                />
+            </TSXSample>
 
-            <h2 className="mt-3">File Picker</h2>
-            <FilePicker accept="image/*" multiple name="images" />
+            <TSXSample title="Table spinner">
+                <Table className="text-center" striped hover>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Content</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <TableSpinner colSpan={2} />
+                    </tbody>
+                </Table>
+            </TSXSample>
 
-            <h2 className="mt-3">Rich-text editor (HTML)</h2>
-            <Editor
-                tools={OriginalTools}
-                value="<p>test</p>"
-                onChange={console.log}
-            />
-            <h2 className="mt-3">Rich-text editor (JSON)</h2>
-            <EditorJS name="content" defaultValue={content} />
+            <TSXSample title="Filter Input">
+                <FilterInput name="tags" />
+            </TSXSample>
 
-            <h2 className="mt-3">Editor HTML</h2>
-            <EditorHTML data={content} />
+            <TSXSample title="File Picker">
+                <FilePicker accept="image/*" multiple name="images" />
+            </TSXSample>
+
+            <TSXSample title="Rich-text editor (HTML)">
+                <Editor value="<p>test</p>" onChange={console.log} />
+            </TSXSample>
+
+            <TSXSample title="Rich-text editor (JSON)">
+                <EditorJS name="content" defaultValue={content} />
+            </TSXSample>
+
+            <TSXSample title="Editor HTML">
+                <EditorHTML data={content} />
+            </TSXSample>
         </Container>
     );
 }

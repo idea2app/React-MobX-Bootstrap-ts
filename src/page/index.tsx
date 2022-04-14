@@ -7,7 +7,7 @@ import NavbarToggle from 'react-bootstrap/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 import NavLink from 'react-bootstrap/NavLink';
 
-import { HomePage } from './Home';
+import HomePage from './Home';
 import { ComponentPage } from './Component';
 
 export function PageFrame() {

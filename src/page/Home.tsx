@@ -1,5 +1,6 @@
 import { PureComponent } from 'react';
 import { observer } from 'mobx-react';
+import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -11,7 +12,9 @@ import Button from 'react-bootstrap/Button';
 import project, { Project } from '../model/Project';
 
 @observer
-export class HomePage extends PureComponent {
+class HomePage extends PureComponent<
+    RouteComponentProps<{}, {}, { guest: string }>
+> {
     componentDidMount() {
         project.getList(
             'facebook/react',
@@ -20,6 +23,10 @@ export class HomePage extends PureComponent {
             'react-bootstrap/react-bootstrap',
             'EasyWebApp/KoAJAX'
         );
+    }
+
+    componentWillUnmount() {
+        project.clearList();
     }
 
     renderProject = ({
@@ -60,14 +67,19 @@ export class HomePage extends PureComponent {
     );
 
     render() {
-        const { list } = project;
+        const { guest } = this.props.query,
+            { list } = project;
 
         return (
             <Container fluid="md">
                 <h1 className="my-4">Upstream projects</h1>
+
+                {guest && <h2>Welcome {guest}!</h2>}
 
                 <Row>{list.map(this.renderProject)}</Row>
             </Container>
         );
     }
 }
+
+export default withRouter(HomePage);

@@ -21,7 +21,7 @@ which is inspired by [WebCell scaffold][5].
 
 ## Extra components
 
-1. [Table spinner](src/component/TableSpinner.tsx)
+1. [Component Sample](src/component/TSXSample.tsx)
 2. Rich-text editor
     - [HTML version][14]
     - [JSON version](src/component/Editor.tsx)
