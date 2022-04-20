@@ -12,12 +12,12 @@
         "@editorjs/list": "^1.7.0",
         "@editorjs/paragraph": "^2.8.0",
         "@editorjs/quote": "^2.4.0",
-        "browser-fs-access": "^0.27.0",
+        "browser-fs-access": "^0.28.1",
         "browser-unhandled-rejection": "^1.0.2",
         "editorjs-html": "^3.4.2",
         "idea-react": "^0.22.2",
         "iterable-observer": "1.0.0-rc.0",
-        "koajax": "^0.7.2",
+        "koajax": "^0.8.0-rc.3",
         "mobx": "^5.15.7",
         "mobx-react": "^6.3.1",
         "react": "^17.0.2",
@@ -27,7 +27,7 @@
         "react-editor-js": "^2.0.6",
         "react-router-class-tools": "^0.1.2",
         "react-router-dom": "^6.3.0",
-        "web-utility": "^3.6.1"
+        "web-utility": "^3.6.2"
     },
     "devDependencies": {
         "@octokit/openapi-types": "^11.2.0",
@@ -43,11 +43,12 @@
         "autoprefixer": "^10.4.4",
         "husky": "^7.0.4",
         "less": "^4.1.2",
-        "lint-staged": "^12.3.7",
+        "lint-staged": "^12.4.0",
         "parcel": "^2.4.1",
         "postcss": "^8.4.12",
+        "postcss-modules": "^4.3.0",
         "prettier": "^2.6.2",
-        "prismjs": "^1.27.0",
+        "prismjs": "^1.28.0",
         "process": "^0.11.10",
         "typescript": "~4.6.3",
         "workbox-cli": "^6.5.3"
@@ -63,6 +64,7 @@
     },
     "browserslist": "> 0.5%, last 2 versions, not dead",
     "postcss": {
+        "modules": true,
         "plugins": {
             "autoprefixer": {
                 "grid": true

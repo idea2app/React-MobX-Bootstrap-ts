@@ -7,6 +7,7 @@ import NavbarToggle from 'react-bootstrap/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 import NavLink from 'react-bootstrap/NavLink';
 
+import style from './index.less';
 import HomePage from './Home';
 import { ComponentPage } from './Component';
 
@@ -17,8 +18,7 @@ export function PageFrame() {
                 <Container>
                     <NavbarBrand href=".">
                         <img
-                            className="me-2"
-                            style={{ width: '2rem' }}
+                            className={`${style.logo} me-2`}
                             src="https://github.com/react-bootstrap.png"
                         />
                         {document.title}
