@@ -12,9 +12,10 @@ self.addEventListener('unhandledrejection', ({ reason }) => {
     if (message) self.alert(message);
 });
 
-const { serviceWorker } = window.navigator;
+const { serviceWorker } = window.navigator,
+    { NODE_ENV = 'development' } = process.env;
 
-if (process.env.NODE_ENV !== 'development')
+if (NODE_ENV !== 'development')
     serviceWorker
         ?.register('sw.js')
         .then(serviceWorkerUpdate)
