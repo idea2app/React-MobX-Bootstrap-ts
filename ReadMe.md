@@ -5,13 +5,12 @@
 [React][1] project scaffold based on [TypeScript][2], [MobX][3] & [Bootstrap][4],
 which is inspired by [WebCell scaffold][5].
 
-[![NPM Dependency](https://david-dm.org/idea2app/React-MobX-Bootstrap-ts.svg)][6]
 [![CI & CD](https://github.com/idea2app/React-MobX-Bootstrap-ts/workflows/CI%20&%20CD/badge.svg)][7]
 
 ## Technology stack
 
 -   Language: [TypeScript v4][2]
--   Component engine: [React 17][1]
+-   Component engine: [PReact 10][6]
 -   State management: [MobX v5][3]
 -   Component suite: [React Bootstrap v2][8]
 -   HTTP Client: [KoAJAX][9]
@@ -29,7 +28,9 @@ which is inspired by [WebCell scaffold][5].
 ## Development
 
 ```shell
-npm install
+npm i pnpm -g
+
+pnpm i
 
 npm start
 ```
@@ -37,7 +38,7 @@ npm start
 ## Deployment
 
 ```shell
-npm run build
+pnpm build
 ```
 
 [1]: https://reactjs.org/
@@ -45,7 +46,7 @@ npm run build
 [3]: https://mobx.js.org/
 [4]: https://getbootstrap.com/
 [5]: https://github.com/EasyWebApp/scaffold
-[6]: https://david-dm.org/idea2app/React-MobX-Bootstrap-ts
+[6]: https://preactjs.com/
 [7]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions
 [8]: https://react-bootstrap.github.io/
 [9]: https://github.com/EasyWebApp/KoAJAX

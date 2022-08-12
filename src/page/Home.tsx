@@ -2,12 +2,7 @@ import { PureComponent } from 'react';
 import { observer } from 'mobx-react';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import CardImg from 'react-bootstrap/CardImg';
-import Button from 'react-bootstrap/Button';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 import project, { Project } from '../model/Project';
 
@@ -39,7 +34,7 @@ class HomePage extends PureComponent<
     }: Project) => (
         <Col className="mb-3" xs={12} sm={6} md={3} key={id}>
             <Card className="h-100">
-                <CardImg variant="top" src={logo} />
+                <Card.Img variant="top" src={logo} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
                     <Card.Text>{description}</Card.Text>
