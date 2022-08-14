@@ -10,7 +10,7 @@ which is inspired by [WebCell scaffold][5].
 ## Technology stack
 
 -   Language: [TypeScript v4][2]
--   Component engine: [PReact 10][6]
+-   Component engine: [React 17][1]
 -   State management: [MobX v5][3]
 -   Component suite: [React Bootstrap v2][8]
 -   HTTP Client: [KoAJAX][9]
@@ -46,7 +46,6 @@ pnpm build
 [3]: https://mobx.js.org/
 [4]: https://getbootstrap.com/
 [5]: https://github.com/EasyWebApp/scaffold
-[6]: https://preactjs.com/
 [7]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions
 [8]: https://react-bootstrap.github.io/
 [9]: https://github.com/EasyWebApp/KoAJAX
