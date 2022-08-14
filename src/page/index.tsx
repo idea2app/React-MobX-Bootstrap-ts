@@ -1,52 +1,46 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
-
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import NavbarBrand from 'react-bootstrap/NavbarBrand';
-import NavbarToggle from 'react-bootstrap/NavbarToggle';
-import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
-import NavLink from 'react-bootstrap/NavLink';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 import * as style from './index.module.less';
 import HomePage from './Home';
 import { ComponentPage } from './Component';
 
-export function PageFrame() {
-    return (
-        <>
-            <Navbar bg="primary" variant="dark" sticky="top" expand="sm">
-                <Container>
-                    <NavbarBrand href=".">
-                        <img
-                            className={`${style.logo} me-2`}
-                            src="https://github.com/react-bootstrap.png"
-                        />
-                        {document.title}
-                    </NavbarBrand>
-                    <NavbarToggle aria-controls="basic-navbar-nav" />
-                    <NavbarCollapse>
-                        <NavLink className="text-white" href="#/">
+export const PageFrame = () => (
+    <>
+        <Navbar bg="primary" variant="dark" sticky="top" expand="sm">
+            <Container>
+                <Navbar.Brand href=".">
+                    <img
+                        className={`${style.logo} me-2`}
+                        src="https://github.com/react-bootstrap.png"
+                    />
+                    {document.title}
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse>
+                    <Nav>
+                        <Nav.Link className="text-white" href="#/">
                             Home
-                        </NavLink>
-                        <NavLink className="text-white" href="#/component">
+                        </Nav.Link>
+                        <Nav.Link className="text-white" href="#/component">
                             Component
-                        </NavLink>
-                        <NavLink
+                        </Nav.Link>
+                        <Nav.Link
                             className="text-white"
                             href="https://github.com/idea2app/React-MobX-Bootstrap-ts"
                         >
                             Source code
-                        </NavLink>
-                    </NavbarCollapse>
-                </Container>
-            </Navbar>
+                        </Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
 
-            <HashRouter>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/component" element={<ComponentPage />} />
-                </Routes>
-            </HashRouter>
-        </>
-    );
-}
+        <HashRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/component" element={<ComponentPage />} />
+            </Routes>
+        </HashRouter>
+    </>
+);
