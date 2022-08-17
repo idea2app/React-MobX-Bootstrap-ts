@@ -4,6 +4,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import * as style from './index.module.less';
 import HomePage from './Home';
 import { ComponentPage } from './Component';
+import { PaginationPage } from './Pagination';
 
 export const PageFrame = () => (
     <>
@@ -25,6 +26,9 @@ export const PageFrame = () => (
                         <Nav.Link className="text-white" href="#/component">
                             Component
                         </Nav.Link>
+                        <Nav.Link className="text-white" href="#/pagination">
+                            Pagination
+                        </Nav.Link>
                         <Nav.Link
                             className="text-white"
                             href="https://github.com/idea2app/React-MobX-Bootstrap-ts"
@@ -40,6 +44,7 @@ export const PageFrame = () => (
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/component" element={<ComponentPage />} />
+                <Route path="/pagination" element={<PaginationPage />} />
             </Routes>
         </HashRouter>
     </>
