@@ -1,84 +1,72 @@
+import { computed } from 'mobx';
 import { observer } from 'mobx-react';
+import { Column, RestTable } from 'mobx-restful-table';
 import { PureComponent } from 'react';
 import { Container, Badge } from 'react-bootstrap';
-import {
-    Loading,
-    Column,
-    IdeaTable,
-    PaginationBar,
-    text2color
-} from 'idea-react';
+import { text2color } from 'idea-react';
 
-import { Project } from '../model/Project';
-import repositoryStore from '../model/Repository';
-import * as style from './Pagination.module.less';
+import repositoryStore, { GitRepository } from '../model/Repository';
+import { i18n } from '../model/Translation';
 
 @observer
 export class PaginationPage extends PureComponent {
-    componentDidMount() {
-        repositoryStore.getList({}, 1);
-    }
+    @computed
+    get columns(): Column<GitRepository>[] {
+        const { t } = i18n;
 
-    columns: Column<Project>[] = [
-        {
-            key: 'full_name',
-            label: 'Repository Name',
-            render: ({ html_url, full_name }) => (
-                <a target="_blank" href={html_url}>
-                    {full_name}
-                </a>
-            )
-        },
-        {
-            key: 'homepage',
-            label: 'Home Page',
-            render: ({ homepage }) => (
-                <a target="_blank" href={homepage}>
-                    {homepage}
-                </a>
-            )
-        },
-        { key: 'language', label: 'Programming Language' },
-        {
-            key: 'topics',
-            label: 'Topic',
-            render: ({ topics }) => (
-                <>
-                    {topics.map(topic => {
-                        const color = text2color(topic);
-
-                        return (
+        return [
+            {
+                key: 'full_name',
+                renderHead: t('repository_name'),
+                renderBody: ({ html_url, full_name }) => (
+                    <a target="_blank" href={html_url} rel="noreferrer">
+                        {full_name}
+                    </a>
+                )
+            },
+            { key: 'homepage', type: 'url', renderHead: t('home_page') },
+            { key: 'language', renderHead: t('programming_language') },
+            {
+                key: 'topics',
+                renderHead: t('topic'),
+                renderBody: ({ topics }) => (
+                    <>
+                        {topics?.map(topic => (
                             <Badge
                                 key={topic}
-                                className="me-2"
-                                bg={color}
-                                text={color === 'light' ? 'dark' : undefined}
+                                as="a"
+                                className="me-2 text-decoration-none"
+                                bg={text2color(topic, ['light'])}
+                                target="_blank"
+                                href={`https://github.com/topics/${topic}`}
                             >
                                 {topic}
                             </Badge>
-                        );
-                    })}
-                </>
-            )
-        },
-        { key: 'stargazers_count', label: 'Star Count' }
-    ];
+                        ))}
+                    </>
+                )
+            },
+            {
+                key: 'stargazers_count',
+                type: 'number',
+                renderHead: t('star_count')
+            }
+        ];
+    }
 
     render() {
-        const { columns } = this,
-            { downloading, pageIndex, pageSize, totalCount, currentPage } =
-                repositoryStore;
-
         return (
-            <Container className={style.root}>
-                {!!downloading && <Loading />}
-
-                <IdeaTable columns={columns} list={currentPage} />
-                <PaginationBar
-                    className="mt-2"
-                    currentPage={pageIndex}
-                    pageCount={Math.ceil(totalCount / pageSize)}
-                    onChange={index => repositoryStore.getList({}, index)}
+            <Container style={{ height: '91vh' }}>
+                <RestTable
+                    className="h-100 text-center"
+                    striped
+                    hover
+                    editable
+                    deletable
+                    columns={this.columns}
+                    store={repositoryStore}
+                    translator={i18n}
+                    onCheck={console.log}
                 />
             </Container>
         );

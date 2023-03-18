@@ -5,6 +5,9 @@ import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 import project, { Project } from '../model/Project';
+import { i18n } from '../model/Translation';
+
+const { t } = i18n;
 
 @observer
 class HomePage extends PureComponent<
@@ -46,7 +49,7 @@ class HomePage extends PureComponent<
                         target="_blank"
                         href={homepage}
                     >
-                        Home page
+                        {t('home_page')}
                     </Button>
                     <Button
                         variant="success"
@@ -54,7 +57,7 @@ class HomePage extends PureComponent<
                         target="_blank"
                         href={html_url}
                     >
-                        Source code
+                        {t('source_code')}
                     </Button>
                 </Card.Footer>
             </Card>
@@ -67,10 +70,13 @@ class HomePage extends PureComponent<
 
         return (
             <Container fluid="md">
-                <h1 className="my-4">Upstream projects</h1>
+                <h1 className="my-4">{t('upstream_projects')}</h1>
 
-                {guest && <h2>Welcome {guest}!</h2>}
-
+                {guest && (
+                    <h2>
+                        {t('welcome')} {guest}!
+                    </h2>
+                )}
                 <Row>{list.map(this.renderProject)}</Row>
             </Container>
         );
