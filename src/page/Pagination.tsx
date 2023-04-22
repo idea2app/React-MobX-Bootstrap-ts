@@ -3,7 +3,7 @@ import { observer } from 'mobx-react';
 import { Column, RestTable } from 'mobx-restful-table';
 import { PureComponent } from 'react';
 import { Container, Badge } from 'react-bootstrap';
-import { text2color } from 'idea-react';
+// import { text2color } from 'idea-react';
 
 import repositoryStore, { GitRepository } from '../model/Repository';
 import { i18n } from '../model/Translation';
@@ -32,16 +32,17 @@ export class PaginationPage extends PureComponent {
                 renderBody: ({ topics }) => (
                     <>
                         {topics?.map(topic => (
-                            <Badge
-                                key={topic}
-                                as="a"
-                                className="me-2 text-decoration-none"
-                                bg={text2color(topic, ['light'])}
-                                target="_blank"
-                                href={`https://github.com/topics/${topic}`}
-                            >
-                                {topic}
-                            </Badge>
+                            // <Badge
+                            //     key={topic}
+                            //     as="a"
+                            //     className="me-2 text-decoration-none"
+                            //     bg={text2color(topic, ['light'])}
+                            //     target="_blank"
+                            //     href={`https://github.com/topics/${topic}`}
+                            // >
+                            //     {topic}
+                            // </Badge>
+                            <></>
                         ))}
                     </>
                 )

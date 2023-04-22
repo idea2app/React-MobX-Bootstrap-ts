@@ -9,7 +9,8 @@
         "jsx": "react-jsx",
         "lib": ["ES2020", "DOM"],
         "sourceMap": true,
-        "outDir": "./dist/"
+        "outDir": "./dist/",
+        "types": ["vite/client", "vite-plugin-pwa/client"]
     },
     "include": ["src/**/*"]
 }

@@ -1,4 +1,4 @@
-![](src/image/logo.png)
+![](public/logo.png)
 
 # React-MobX-Bootstrap.ts
 

@@ -1,9 +1,9 @@
-import { Select, Option } from 'idea-react';
+// import { Select, Option } from 'idea-react';
 import { observer } from 'mobx-react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 
 import { i18n, LanguageName } from '../model/Translation';
-import * as style from './MainNavigator.module.less';
+import style from './MainNavigator.module.less';
 
 export const MainNavigator = observer(() => {
     const { t, currentLanguage } = i18n;
@@ -33,9 +33,6 @@ export const MainNavigator = observer(() => {
                         <Nav.Link className="text-white" href="#/">
                             {t('home_page')}
                         </Nav.Link>
-                        <Nav.Link className="text-white" href="#/component">
-                            {t('component')}
-                        </Nav.Link>
                         <Nav.Link className="text-white" href="#/pagination">
                             {t('pagination')}
                         </Nav.Link>
@@ -47,7 +44,7 @@ export const MainNavigator = observer(() => {
                         </Nav.Link>
                     </Nav>
 
-                    <Select
+                    {/* <Select
                         value={currentLanguage}
                         onChange={key =>
                             i18n.changeLanguage(key as typeof currentLanguage)
@@ -58,7 +55,7 @@ export const MainNavigator = observer(() => {
                                 {name}
                             </Option>
                         ))}
-                    </Select>
+                    </Select> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

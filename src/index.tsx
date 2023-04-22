@@ -13,7 +13,7 @@ self.addEventListener('unhandledrejection', ({ reason }) => {
 });
 
 const { serviceWorker } = window.navigator,
-    { NODE_ENV = 'development' } = process.env;
+    { NODE_ENV = 'development' } = import.meta.env;
 
 if (NODE_ENV !== 'development')
     serviceWorker
