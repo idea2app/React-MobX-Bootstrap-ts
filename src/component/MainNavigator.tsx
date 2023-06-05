@@ -39,6 +39,9 @@ export const MainNavigator = observer(() => {
                         <Nav.Link className="text-white" href="#/pagination">
                             {t('pagination')}
                         </Nav.Link>
+                        <Nav.Link className="text-white" href="#/scroll-list">
+                            {t('scroll_list')}
+                        </Nav.Link>
                         <Nav.Link
                             className="text-white"
                             href="https://github.com/idea2app/React-MobX-Bootstrap-ts"

@@ -4,6 +4,7 @@ import { MainNavigator } from '../component/MainNavigator';
 import HomePage from './Home';
 import { ComponentPage } from './Component';
 import { PaginationPage } from './Pagination';
+import { ScrollListPage } from './ScrollList';
 
 export const PageFrame = () => (
     <>
@@ -14,6 +15,7 @@ export const PageFrame = () => (
                 <Route path="/" element={<HomePage />} />
                 <Route path="/component" element={<ComponentPage />} />
                 <Route path="/pagination" element={<PaginationPage />} />
+                <Route path="/scroll-list" element={<ScrollListPage />} />
             </Routes>
         </HashRouter>
     </>
