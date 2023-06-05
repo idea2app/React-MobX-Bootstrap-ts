@@ -2,7 +2,9 @@
 coverage/
 dist/
 package-lock.json
+yarn.lock
 node_modules/
+.env
 *.log
 .husky/_/
 
