@@ -1,3 +1,4 @@
+import { observer } from 'mobx-react';
 import { ScrollList } from 'mobx-restful-table';
 import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -6,7 +7,7 @@ import { GitCard } from '../component/Git/Card';
 import repositoryStore from '../model/Repository';
 import { i18n } from '../model/Translation';
 
-export const ScrollListPage: FC = () => (
+export const ScrollListPage: FC = observer(() => (
     <Container>
         <h1 className="my-4">{i18n.t('scroll_list')}</h1>
 
@@ -24,4 +25,4 @@ export const ScrollListPage: FC = () => (
             )}
         />
     </Container>
-);
+));
