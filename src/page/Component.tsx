@@ -17,8 +17,7 @@ import { i18n } from '../model/Translation';
 
 Table.displayName = 'Table';
 
-const { t } = i18n,
-    content = JSON.stringify(RichEditData);
+const { t } = i18n;
 
 export const ComponentPage = observer(() => (
     <Container className="my-3" fluid="md">
@@ -62,11 +61,11 @@ export const ComponentPage = observer(() => (
         </TSXSample>
 
         <TSXSample title="Rich-text editor (JSON)">
-            <EditorJS name="content" defaultValue={content} />
+            <EditorJS name="content" defaultValue={RichEditData} />
         </TSXSample>
 
         <TSXSample title="Editor HTML">
-            <EditorHTML data={content} />
+            <EditorHTML data={RichEditData} />
         </TSXSample>
     </Container>
 ));
