@@ -7,22 +7,25 @@ which is inspired by [WebCell scaffold][5].
 
 [![CI & CD](https://github.com/idea2app/React-MobX-Bootstrap-ts/workflows/CI%20&%20CD/badge.svg)][7]
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)][8]
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][9]
+
 ## Technology stack
 
 -   Language: [TypeScript v5][2]
 -   Component engine: [React v18][1]
 -   State management: [MobX v6][3]
--   Component suite: [React Bootstrap v2][8]
--   HTTP Client: [KoAJAX][9]
--   PWA framework: [Workbox v7][10]
--   Package bundler: [Parcel v2][11]
--   CI / CD: GitHub [Actions][12] + [Pages][13]
+-   Component suite: [React Bootstrap v2][10]
+-   HTTP Client: [KoAJAX][11]
+-   PWA framework: [Workbox v7][12]
+-   Package bundler: [Parcel v2][13]
+-   CI / CD: GitHub [Actions][14] + [Pages][15]
 
 ## Extra components
 
 1. [Component Sample](src/component/TSXSample.tsx)
 2. Rich-text editor
-    - [HTML version][14]
+    - [HTML version][16]
     - [JSON version](src/component/Editor.tsx)
 
 ## Development
@@ -47,10 +50,12 @@ pnpm build
 [4]: https://getbootstrap.com/
 [5]: https://github.com/EasyWebApp/scaffold
 [7]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions
-[8]: https://react-bootstrap.github.io/
-[9]: https://github.com/EasyWebApp/KoAJAX
-[10]: https://developers.google.com/web/tools/workbox
-[11]: https://parceljs.org
-[12]: https://github.com/features/actions
-[13]: https://pages.github.com/
-[14]: https://github.com/idea2app/React-Bootstrap-editor
+[8]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
+[9]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
+[10]: https://react-bootstrap.github.io/
+[11]: https://github.com/EasyWebApp/KoAJAX
+[12]: https://developers.google.com/web/tools/workbox
+[13]: https://parceljs.org
+[14]: https://github.com/features/actions
+[15]: https://pages.github.com/
+[16]: https://github.com/idea2app/React-Bootstrap-editor
