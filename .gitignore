@@ -18,5 +18,5 @@ ehthumbs.db
 Thumbs.db
 
 # IDE configuration
-.vscode/
+.vscode/settings.json
 .idea/
