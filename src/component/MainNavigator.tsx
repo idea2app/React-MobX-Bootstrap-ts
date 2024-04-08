@@ -14,7 +14,7 @@ export const MainNavigator = observer(() => {
             bg="primary"
             variant="dark"
             sticky="top"
-            expand="sm"
+            expand="lg"
             collapseOnSelect
         >
             <Container>
@@ -41,6 +41,9 @@ export const MainNavigator = observer(() => {
                         </Nav.Link>
                         <Nav.Link className="text-white" href="#/scroll-list">
                             {t('scroll_list')}
+                        </Nav.Link>
+                        <Nav.Link className="text-white" href="#/chart">
+                            {t('chart')}
                         </Nav.Link>
                         <Nav.Link
                             className="text-white"
