@@ -1,4 +1,4 @@
-import { PureComponent } from 'react';
+import { Component } from 'react';
 import { observer } from 'mobx-react';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
@@ -10,7 +10,7 @@ import { i18n } from '../model/Translation';
 const { t } = i18n;
 
 @observer
-class HomePage extends PureComponent<
+class HomePage extends Component<
     RouteComponentProps<{}, {}, { guest: string }>
 > {
     componentDidMount() {
@@ -19,7 +19,8 @@ class HomePage extends PureComponent<
             'microsoft/TypeScript',
             'mobxjs/mobx',
             'react-bootstrap/react-bootstrap',
-            'EasyWebApp/KoAJAX'
+            'EasyWebApp/KoAJAX',
+            'idea2app/ECharts-JSX'
         );
     }
 
