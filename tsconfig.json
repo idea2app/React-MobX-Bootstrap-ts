@@ -6,8 +6,15 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
-        "jsx": "react-jsx",
         "lib": ["ES2023", "DOM"],
+        "skipLibCheck": true,
+        "baseUrl": "./",
+        "jsx": "react-jsx",
+        "paths": {
+            "react": ["./node_modules/preact/compat/"],
+            "react/jsx-runtime": ["./node_modules/preact/jsx-runtime"],
+            "react-dom": ["./node_modules/preact/compat/"]
+        },
         "sourceMap": true,
         "outDir": "./dist/"
     },

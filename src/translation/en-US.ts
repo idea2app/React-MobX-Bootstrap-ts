@@ -7,6 +7,7 @@ export default {
     source_code: 'Source Code',
     component: 'Component',
     pagination: 'Pagination',
+    chart: 'Chart',
     powered_by: 'Powered by',
     documentation: 'Documentation',
     learn: 'Learn',

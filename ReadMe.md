@@ -12,10 +12,10 @@
 ## Technology stack
 
 -   Language: [TypeScript v5][9]
--   Component engine: [React v18][10]
+-   Component engine: [PReact v10][10]
 -   State management: [MobX v6][11]
 -   Component suite: [React Bootstrap v2][12]
--   HTTP Client: [KoAJAX][13]
+-   HTTP Client: [KoAJAX v1][13]
 -   PWA framework: [Workbox v7][14]
 -   Package bundler: [Parcel v2][15]
 -   CI / CD: GitHub [Actions][16] + [Pages][17]
@@ -26,6 +26,8 @@
 2.  Rich-text editor
     -   [HTML version][18]
     -   [JSON version](src/component/Editor.tsx)
+3.  [GitHub logo](src/component/Git/Logo.tsx)
+4.  [GitHub card](src/component/Git/Card.tsx)
 
 ## Best practice
 
@@ -62,7 +64,7 @@ pnpm build
 [7]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
 [8]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
 [9]: https://www.typescriptlang.org/
-[10]: https://react.dev/
+[10]: https://preactjs.com/
 [11]: https://mobx.js.org/
 [12]: https://react-bootstrap.github.io/
 [13]: https://github.com/EasyWebApp/KoAJAX

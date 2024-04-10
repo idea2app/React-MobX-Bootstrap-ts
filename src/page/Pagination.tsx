@@ -1,7 +1,7 @@
 import { computed } from 'mobx';
 import { observer } from 'mobx-react';
 import { Column, RestTable } from 'mobx-restful-table';
-import { PureComponent } from 'react';
+import { Component } from 'react';
 import { Container, Badge } from 'react-bootstrap';
 import { text2color } from 'idea-react';
 
@@ -9,7 +9,7 @@ import repositoryStore, { GitRepository } from '../model/Repository';
 import { i18n } from '../model/Translation';
 
 @observer
-export class PaginationPage extends PureComponent {
+export class PaginationPage extends Component {
     @computed
     get columns(): Column<GitRepository>[] {
         const { t } = i18n;
