@@ -63,11 +63,11 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1(mobx@6.12.3)
       mobx-restful:
-        specifier: ^1.0.0-rc.0
-        version: 1.0.0-rc.0(mobx@6.12.3)(typescript@5.4.5)
+        specifier: ^1.0.0-rc.2
+        version: 1.0.0-rc.2(mobx@6.12.3)(typescript@5.4.5)
       mobx-restful-table:
         specifier: ^2.0.0-rc.1
-        version: 2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.0(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5)
+        version: 2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.2(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5)
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -3249,8 +3249,8 @@ packages:
       mobx-restful: ^0.7.0-rc.0
       react: '>=16.8'
 
-  mobx-restful@1.0.0-rc.0:
-    resolution: {integrity: sha512-o0Dj9v/0VLgrjN1cFc0WfnBPJEQcV8JtdWnkLBklFnwQ44KvOrluQXCObklv9bswlPEVOwWTwDiRCJzFr+2Leg==}
+  mobx-restful@1.0.0-rc.2:
+    resolution: {integrity: sha512-bqX+en987/nsDP6hNSnw/yukMzVqEsHzrAyK848TQvHW1Dow1ZHbSXtyX8I91LiaRmmGBpJq4QbRS8jAxTfp8Q==}
     peerDependencies:
       mobx: '>=6.11'
 
@@ -7534,7 +7534,7 @@ snapshots:
 
   iterable-observer@1.0.1:
     dependencies:
-      '@swc/helpers': 0.5.8
+      '@swc/helpers': 0.5.11
 
   jake@10.8.7:
     dependencies:
@@ -8346,7 +8346,7 @@ snapshots:
       mobx: 6.12.3
       mobx-react-lite: 4.0.7(mobx@6.12.3)
 
-  mobx-restful-table@2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.0(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5):
+  mobx-restful-table@2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.2(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5):
     dependencies:
       '@swc/helpers': 0.5.8
       classnames: 2.5.1
@@ -8355,7 +8355,7 @@ snapshots:
       mobx-i18n: 0.5.0(mobx@6.12.3)
       mobx-react: 9.1.1(mobx@6.12.3)
       mobx-react-helper: 0.3.1(mobx@6.12.3)
-      mobx-restful: 1.0.0-rc.0(mobx@6.12.3)(typescript@5.4.5)
+      mobx-restful: 1.0.0-rc.2(mobx@6.12.3)(typescript@5.4.5)
       react-bootstrap: 2.10.2(@types/react@18.2.74)
       regenerator-runtime: 0.14.1
       web-utility: 4.4.0(typescript@5.4.5)
@@ -8364,7 +8364,7 @@ snapshots:
       - react-dom
       - typescript
 
-  mobx-restful@1.0.0-rc.0(mobx@6.12.3)(typescript@5.4.5):
+  mobx-restful@1.0.0-rc.2(mobx@6.12.3)(typescript@5.4.5):
     dependencies:
       '@swc/helpers': 0.5.11
       idb-keyval: 6.2.1

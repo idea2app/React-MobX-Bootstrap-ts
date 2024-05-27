@@ -1,6 +1,6 @@
 {
     "name": "react-mobx-bootstrap-ts",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "React project scaffold based on TypeScript, MobX & Bootstrap, which is inspired by WebCell scaffold.",
     "author": "shiy2008@gmail.com",
     "dependencies": {
@@ -22,7 +22,7 @@
         "mobx": "^6.12.3",
         "mobx-i18n": "^0.5.0",
         "mobx-react": "^9.1.1",
-        "mobx-restful": "^1.0.0-rc.0",
+        "mobx-restful": "^1.0.0-rc.2",
         "mobx-restful-table": "^2.0.0-rc.1",
         "preact": "^10.22.0",
         "react-bootstrap": "^2.10.2",

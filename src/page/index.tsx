@@ -7,6 +7,7 @@ import { ComponentPage } from './Component';
 import { PaginationPage } from './Pagination';
 import { ScrollListPage } from './ScrollList';
 import ChartPage from './chart.mdx';
+import { DownloaderPage } from './Downloader';
 
 export const PageFrame = () => (
     <>
@@ -26,6 +27,7 @@ export const PageFrame = () => (
                         </Container>
                     }
                 />
+                <Route path="/downloader" element={<DownloaderPage />} />
             </Routes>
         </HashRouter>
     </>

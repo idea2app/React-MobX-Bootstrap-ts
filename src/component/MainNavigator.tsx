@@ -45,6 +45,9 @@ export const MainNavigator = observer(() => {
                         <Nav.Link className="text-white" href="#/chart">
                             {t('chart')}
                         </Nav.Link>
+                        <Nav.Link className="text-white" href="#/downloader">
+                            Downloader
+                        </Nav.Link>
                         <Nav.Link
                             className="text-white"
                             href="https://github.com/idea2app/React-MobX-Bootstrap-ts"
