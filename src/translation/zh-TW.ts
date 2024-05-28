@@ -8,6 +8,7 @@ export default {
     component: '元件',
     pagination: '分頁',
     chart: '圖表',
+    downloader: '下載器',
     powered_by: '強力驅動自',
     documentation: '文檔',
     learn: '學習',

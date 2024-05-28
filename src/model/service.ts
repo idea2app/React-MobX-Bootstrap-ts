@@ -1,4 +1,5 @@
 import { HTTPClient } from 'koajax';
+import { Downloader } from 'mobx-restful';
 
 const GithubToken = process.env.GITHUB_TOKEN;
 
@@ -13,3 +14,5 @@ export const service = new HTTPClient({
         };
     return next();
 });
+
+export const downloader = new Downloader();

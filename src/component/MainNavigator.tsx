@@ -1,7 +1,8 @@
-import { Select, Option } from 'idea-react';
+import { Option, Select } from 'idea-react';
 import { observer } from 'mobx-react';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
+import { mainNavLinks } from '../meta';
 import { i18n, LanguageName } from '../model/Translation';
 import * as style from './MainNavigator.module.less';
 
@@ -30,27 +31,15 @@ export const MainNavigator = observer(() => {
 
                 <Navbar.Collapse id="navbar-inner">
                     <Nav className="me-auto">
-                        <Nav.Link className="text-white" href="#/">
-                            {t('home_page')}
-                        </Nav.Link>
-                        <Nav.Link className="text-white" href="#/component">
-                            {t('component')}
-                        </Nav.Link>
-                        <Nav.Link className="text-white" href="#/pagination">
-                            {t('pagination')}
-                        </Nav.Link>
-                        <Nav.Link className="text-white" href="#/scroll-list">
-                            {t('scroll_list')}
-                        </Nav.Link>
-                        <Nav.Link className="text-white" href="#/chart">
-                            {t('chart')}
-                        </Nav.Link>
-                        <Nav.Link
-                            className="text-white"
-                            href="https://github.com/idea2app/React-MobX-Bootstrap-ts"
-                        >
-                            {t('source_code')}
-                        </Nav.Link>
+                        {mainNavLinks().map(({ title, href }) => (
+                            <Nav.Link
+                                key={title}
+                                className="text-white"
+                                href={href}
+                            >
+                                {title}
+                            </Nav.Link>
+                        ))}
                     </Nav>
 
                     <Select

@@ -4,6 +4,10 @@ declare module '*.less' {
     export = map;
 }
 
+declare module 'browser-unhandled-rejection' {
+    export const auto: () => void;
+}
+
 declare module '@editorjs/*' {
     const Plugin: import('react').ComponentClass;
 
