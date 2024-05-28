@@ -8,6 +8,7 @@ export default {
     component: 'Component',
     pagination: 'Pagination',
     chart: 'Chart',
+    downloader: 'Downloader',
     powered_by: 'Powered by',
     documentation: 'Documentation',
     learn: 'Learn',

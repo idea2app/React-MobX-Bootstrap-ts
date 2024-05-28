@@ -23,36 +23,32 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
                 {task.totalSize.toShortString()}
             </small>
             <div className="d-flex gap-3">
-                {task.percent < 100 && (
-                    <>
-                        {task.executing ? (
-                            <Button
-                                size="sm"
-                                variant="warning"
-                                onClick={() => task.pause()}
-                            >
-                                <Icon name="pause" />
-                            </Button>
-                        ) : (
-                            <Button
-                                size="sm"
-                                variant="success"
-                                onClick={() => task.start()}
-                            >
-                                <Icon name="play" />
-                            </Button>
-                        )}
-                    </>
-                )}
-                {!task.executing && (
-                    <Button
-                        size="sm"
-                        variant="danger"
-                        onClick={() => downloader.destroyTask(task.name)}
-                    >
-                        <Icon name="trash" />
-                    </Button>
-                )}
+                {task.percent < 100 &&
+                    (task.executing ? (
+                        <Button
+                            size="sm"
+                            variant="warning"
+                            onClick={() => task.pause()}
+                        >
+                            <Icon name="pause" />
+                        </Button>
+                    ) : (
+                        <Button
+                            size="sm"
+                            variant="success"
+                            onClick={() => task.start()}
+                        >
+                            <Icon name="play" />
+                        </Button>
+                    ))}
+                <Button
+                    size="sm"
+                    variant="danger"
+                    disabled={task.executing}
+                    onClick={() => downloader.destroyTask(task.name)}
+                >
+                    <Icon name="trash" />
+                </Button>
             </div>
         </Card.Footer>
     </Card>
