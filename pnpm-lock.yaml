@@ -48,14 +48,17 @@ importers:
         specifier: ^2.0.0-rc.2
         version: 2.0.0-rc.2(@types/react@18.2.74)(typescript@5.4.5)
       koajax:
-        specifier: ^1.1.0
-        version: 1.1.0(typescript@5.4.5)
+        specifier: ^1.1.2
+        version: 1.1.2(typescript@5.4.5)
       lodash:
         specifier: ^4.17.21
         version: 4.17.21
       mobx:
         specifier: ^6.12.3
         version: 6.12.3
+      mobx-github:
+        specifier: 0.3.0-rc.1
+        version: 0.3.0-rc.1(typescript@5.4.5)
       mobx-i18n:
         specifier: ^0.5.0
         version: 0.5.0(mobx@6.12.3)
@@ -63,11 +66,11 @@ importers:
         specifier: ^9.1.1
         version: 9.1.1(mobx@6.12.3)
       mobx-restful:
-        specifier: ^1.0.0-rc.5
-        version: 1.0.0-rc.5(mobx@6.12.3)(typescript@5.4.5)
+        specifier: ^1.0.0-rc.6
+        version: 1.0.0-rc.6(mobx@6.12.3)(typescript@5.4.5)
       mobx-restful-table:
         specifier: ^2.0.0-rc.1
-        version: 2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.5(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5)
+        version: 2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.6(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5)
       preact:
         specifier: ^10.22.0
         version: 10.22.0
@@ -91,8 +94,8 @@ importers:
         version: 4.4.0(typescript@5.4.5)
     devDependencies:
       '@babel/runtime':
-        specifier: ^7.24.6
-        version: 7.24.6
+        specifier: ^7.24.7
+        version: 7.24.7
       '@octokit/openapi-types':
         specifier: ^22.2.0
         version: 22.2.0
@@ -115,8 +118,8 @@ importers:
         specifier: ^4.17.4
         version: 4.17.4
       '@types/node':
-        specifier: ^18.19.33
-        version: 18.19.33
+        specifier: ^18.19.34
+        version: 18.19.34
       buffer:
         specifier: ^6.0.3
         version: 6.0.3
@@ -133,8 +136,8 @@ importers:
         specifier: ^0.3.2
         version: 0.3.2(@parcel/core@2.12.0(@swc/helpers@0.5.11))(@swc/helpers@0.5.11)
       prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
+        specifier: ^3.3.1
+        version: 3.3.1
       prismjs:
         specifier: ^1.29.0
         version: 1.29.0
@@ -720,8 +723,8 @@ packages:
   '@babel/regjsgen@0.8.0':
     resolution: {integrity: sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==}
 
-  '@babel/runtime@7.24.6':
-    resolution: {integrity: sha512-Ja18XcETdEl5mzzACGd+DKgaGJzPTCow7EglgwTmHdwokzDFYh/MHua6lU6DV/hjF2IaOJ4oX2nqnjG7RElKOw==}
+  '@babel/runtime@7.24.7':
+    resolution: {integrity: sha512-UwgBRMjJP+xv857DCngvqXI3Iq6J4v0wXmwc6sapg+zyhbwmQX67LUEFrkK5tbyJ30jGuG3ZvWpBiB9LCy1kWw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.24.0':
@@ -1458,8 +1461,8 @@ packages:
   '@types/node-fetch@2.6.11':
     resolution: {integrity: sha512-24xFj9R5+rfQJLRyM56qh+wnVSYhyXC2tkoBndtY0U+vubqNsYXGjufB2nn8Q6gt0LrARwL6UBtMCSVCwl4B1g==}
 
-  '@types/node@18.19.33':
-    resolution: {integrity: sha512-NR9+KrpSajr2qBVp/Yt5TU/rp+b5Mayi3+OlMlcg2cVCfRmcG5PWZ7S4+MG9PZ5gWBoc9Pd0BKSRViuBCRPu0A==}
+  '@types/node@18.19.34':
+    resolution: {integrity: sha512-eXF4pfBNV5DAMKGbI02NnDtWrQ40hAN558/2vvS4gMpMIxaf6JmD7YjnZbq0Q9TDSSkKBamime8ewRoomHdt4g==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2770,8 +2773,14 @@ packages:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
 
-  koajax@1.1.0:
-    resolution: {integrity: sha512-5BzwkuLlZGC1Ro3NgJRMysXc/FtnHJiCMpLOTgDBHl+4v1xtBWTHvMm4SL2mwf2wszJ5OUWQ6m5I3M63rIqzKQ==}
+  koajax@0.9.6:
+    resolution: {integrity: sha512-Cv5HH7igfN7HEGLwRzu4TEzXLTm3QSpbR48Gif9dhPPBNKZ8ELS1bbh3Dik1s83vpKnnjC+DcFU8ql+LwNg3tQ==}
+    deprecated: Don't use versions with old API & bugs
+    peerDependencies:
+      jsdom: '>=21'
+
+  koajax@1.1.2:
+    resolution: {integrity: sha512-TGWJhGpojfSYdqGIKK8CWwMhUY1LYDyvodt6LywHVYEH6qq38/3DgW+FKTCV88O59G0J4W2XFbBTF8nvZ/J/nw==}
     peerDependencies:
       jsdom: '>=21'
 
@@ -3203,6 +3212,9 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  mobx-github@0.3.0-rc.1:
+    resolution: {integrity: sha512-KQeW3Y0ActHJjsO1uKveca3KjpIeP0qRpk96v5PjaipwGAY3sRmh1pOJr11LWvyE2CY8UcZ72zS4SSZc88qC2w==}
+
   mobx-i18n@0.5.0:
     resolution: {integrity: sha512-ZflCX7iqosU/ZhfGV3uaQGcptK1w1pHBEn4PWc1b+IZtLOcc4agaLQNj5OIIbTQNLNNxNdA5k1+Ze9aqStsHzA==}
     peerDependencies:
@@ -3249,8 +3261,14 @@ packages:
       mobx-restful: ^0.7.0-rc.0
       react: '>=16.8'
 
-  mobx-restful@1.0.0-rc.5:
-    resolution: {integrity: sha512-7NpXLHqMXyQpIAsFb0bXM+fURhrxfO+tD5SGFElyCKvF95QoeMmhXI258SvAF9Q/5lwE2+NbI5TGEHDKqo8lAg==}
+  mobx-restful@0.7.0-rc.0:
+    resolution: {integrity: sha512-fM2ymsA+u8N0sCK8d1sb26Zja9G4PxKMWuRzFJzVzvKX0ba1pViRCeC4qiH8ITzhAw/vIySNeGZ8iObxAZN5ww==}
+    deprecated: Don't use versions with old API & bugs
+    peerDependencies:
+      mobx: '>=6.11'
+
+  mobx-restful@1.0.0-rc.6:
+    resolution: {integrity: sha512-vAe4jORvueaFFupTQbjF98S8JHh5n7lPHon3hCz+c0Ncc5ZIOWSm24GlfLsoUXxoikqM51mo/nbZbNDDJqod3w==}
     peerDependencies:
       mobx: '>=6.11'
 
@@ -3489,8 +3507,8 @@ packages:
     resolution: {integrity: sha512-ravE6m9Atw9Z/jjttRUZ+clIXogdghyZAuWJ3qEzjT+jI/dL1ifAqhZeC5VHzQp1MSt1+jxKkFNemj/iO7tVUA==}
     engines: {node: '>=4'}
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  prettier@3.3.1:
+    resolution: {integrity: sha512-7CAwy5dRsxs8PHXT3twixW9/OEll8MLE0VRPCJyl7CkS6VHGPSlsVaWTiASPTyGyYRyApxlaWTzwUxVNrhcwDg==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5082,7 +5100,7 @@ snapshots:
 
   '@babel/regjsgen@0.8.0': {}
 
-  '@babel/runtime@7.24.6':
+  '@babel/runtime@7.24.7':
     dependencies:
       regenerator-runtime: 0.14.1
 
@@ -5137,7 +5155,7 @@ snapshots:
 
   '@editorjs/link@2.6.2':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@codexteam/icons': 0.0.4
 
   '@editorjs/list@1.9.0':
@@ -5952,7 +5970,7 @@ snapshots:
 
   '@remark-embedder/core@3.0.2':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@types/hast': 2.3.10
       '@types/mdast': 3.0.15
       hast-util-from-parse5: 7.1.2
@@ -5962,7 +5980,7 @@ snapshots:
 
   '@remark-embedder/transformer-oembed@3.0.0(@remark-embedder/core@3.0.2)':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@remark-embedder/core': 3.0.2
       '@types/make-fetch-happen': 10.0.4
       make-fetch-happen: 10.2.1
@@ -5978,7 +5996,7 @@ snapshots:
 
   '@restart/ui@1.6.8':
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@popperjs/core': 2.11.8
       '@react-aria/ssr': 3.9.2
       '@restart/hooks': 0.4.16
@@ -6139,7 +6157,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
 
   '@types/lodash@4.17.4': {}
 
@@ -6165,10 +6183,10 @@ snapshots:
 
   '@types/node-fetch@2.6.11':
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
       form-data: 4.0.0
 
-  '@types/node@18.19.33':
+  '@types/node@18.19.34':
     dependencies:
       undici-types: 5.26.5
 
@@ -6189,13 +6207,13 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
 
   '@types/retry@0.12.5': {}
 
   '@types/ssri@7.1.5':
     dependencies:
-      '@types/node': 18.19.33
+      '@types/node': 18.19.34
 
   '@types/trusted-types@2.0.7': {}
 
@@ -6703,7 +6721,7 @@ snapshots:
 
   dom-helpers@5.2.1:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       csstype: 3.1.3
 
   dom-renderer@2.1.4(typescript@5.4.5):
@@ -7216,7 +7234,7 @@ snapshots:
 
   history@5.3.0:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
 
   hosted-git-info@2.8.9: {}
 
@@ -7579,7 +7597,16 @@ snapshots:
 
   kind-of@6.0.3: {}
 
-  koajax@1.1.0(typescript@5.4.5):
+  koajax@0.9.6(typescript@5.4.5):
+    dependencies:
+      '@swc/helpers': 0.5.11
+      iterable-observer: 1.0.1
+      regenerator-runtime: 0.14.1
+      web-utility: 4.4.0(typescript@5.4.5)
+    transitivePeerDependencies:
+      - typescript
+
+  koajax@1.1.2(typescript@5.4.5):
     dependencies:
       '@swc/helpers': 0.5.11
       iterable-observer: 1.0.1
@@ -8324,6 +8351,20 @@ snapshots:
 
   mkdirp@1.0.4: {}
 
+  mobx-github@0.3.0-rc.1(typescript@5.4.5):
+    dependencies:
+      '@octokit/openapi-types': 22.2.0
+      '@swc/helpers': 0.5.11
+      '@types/lodash': 4.17.4
+      koajax: 1.1.2(typescript@5.4.5)
+      lodash: 4.17.21
+      mobx: 6.12.3
+      mobx-restful: 0.7.0-rc.0(mobx@6.12.3)(typescript@5.4.5)
+      web-utility: 4.4.0(typescript@5.4.5)
+    transitivePeerDependencies:
+      - jsdom
+      - typescript
+
   mobx-i18n@0.5.0(mobx@6.12.3):
     dependencies:
       '@swc/helpers': 0.5.8
@@ -8346,7 +8387,7 @@ snapshots:
       mobx: 6.12.3
       mobx-react-lite: 4.0.7(mobx@6.12.3)
 
-  mobx-restful-table@2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.5(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5):
+  mobx-restful-table@2.0.0-rc.1(@types/react@18.2.74)(mobx-i18n@0.5.0(mobx@6.12.3))(mobx-react@9.1.1(mobx@6.12.3))(mobx-restful@1.0.0-rc.6(mobx@6.12.3)(typescript@5.4.5))(mobx@6.12.3)(typescript@5.4.5):
     dependencies:
       '@swc/helpers': 0.5.8
       classnames: 2.5.1
@@ -8355,7 +8396,7 @@ snapshots:
       mobx-i18n: 0.5.0(mobx@6.12.3)
       mobx-react: 9.1.1(mobx@6.12.3)
       mobx-react-helper: 0.3.1(mobx@6.12.3)
-      mobx-restful: 1.0.0-rc.5(mobx@6.12.3)(typescript@5.4.5)
+      mobx-restful: 1.0.0-rc.6(mobx@6.12.3)(typescript@5.4.5)
       react-bootstrap: 2.10.2(@types/react@18.2.74)
       regenerator-runtime: 0.14.1
       web-utility: 4.4.0(typescript@5.4.5)
@@ -8364,11 +8405,22 @@ snapshots:
       - react-dom
       - typescript
 
-  mobx-restful@1.0.0-rc.5(mobx@6.12.3)(typescript@5.4.5):
+  mobx-restful@0.7.0-rc.0(mobx@6.12.3)(typescript@5.4.5):
+    dependencies:
+      '@swc/helpers': 0.5.11
+      koajax: 0.9.6(typescript@5.4.5)
+      mobx: 6.12.3
+      regenerator-runtime: 0.14.1
+      web-utility: 4.4.0(typescript@5.4.5)
+    transitivePeerDependencies:
+      - jsdom
+      - typescript
+
+  mobx-restful@1.0.0-rc.6(mobx@6.12.3)(typescript@5.4.5):
     dependencies:
       '@swc/helpers': 0.5.11
       idb-keyval: 6.2.1
-      koajax: 1.1.0(typescript@5.4.5)
+      koajax: 1.1.2(typescript@5.4.5)
       mobx: 6.12.3
       native-file-system-adapter: 3.0.1
       regenerator-runtime: 0.14.1
@@ -8645,7 +8697,7 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier@3.2.5: {}
+  prettier@3.3.1: {}
 
   pretty-bytes@5.6.0: {}
 
@@ -8719,7 +8771,7 @@ snapshots:
 
   react-bootstrap@2.10.2(@types/react@18.2.74):
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@restart/hooks': 0.4.16
       '@restart/ui': 1.6.8
       '@types/react-transition-group': 4.4.10
@@ -8779,7 +8831,7 @@ snapshots:
 
   react-transition-group@4.4.5:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
@@ -8830,7 +8882,7 @@ snapshots:
 
   regenerator-transform@0.15.2:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
 
   regexp.prototype.flags@1.5.2:
     dependencies:
@@ -9333,7 +9385,7 @@ snapshots:
 
   uncontrollable@7.2.1:
     dependencies:
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@types/react': 18.2.74
       invariant: 2.2.4
       react-lifecycles-compat: 3.0.4
@@ -9596,7 +9648,7 @@ snapshots:
       '@apideck/better-ajv-errors': 0.3.6(ajv@8.12.0)
       '@babel/core': 7.24.4
       '@babel/preset-env': 7.24.4(@babel/core@7.24.4)
-      '@babel/runtime': 7.24.6
+      '@babel/runtime': 7.24.7
       '@rollup/plugin-babel': 5.3.1(@babel/core@7.24.4)(rollup@2.79.1)
       '@rollup/plugin-node-resolve': 15.2.3(rollup@2.79.1)
       '@rollup/plugin-replace': 2.4.2(rollup@2.79.1)

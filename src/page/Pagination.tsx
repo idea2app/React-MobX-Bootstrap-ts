@@ -1,11 +1,12 @@
+import { text2color } from 'idea-react';
 import { computed } from 'mobx';
+import { GitRepository } from 'mobx-github';
 import { observer } from 'mobx-react';
 import { Column, RestTable } from 'mobx-restful-table';
 import { Component } from 'react';
-import { Container, Badge } from 'react-bootstrap';
-import { text2color } from 'idea-react';
+import { Badge, Container } from 'react-bootstrap';
 
-import repositoryStore, { GitRepository } from '../model/Repository';
+import { repositoryStore } from '../model/service';
 import { i18n } from '../model/Translation';
 
 @observer

@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 
 import { GitCard } from '../component/Git/Card';
-import repositoryStore from '../model/Repository';
+import { repositoryStore } from '../model/service';
 import { i18n } from '../model/Translation';
 
 export const ScrollListPage: FC = observer(() => (

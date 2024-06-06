@@ -1,9 +1,9 @@
 import { text2color } from 'idea-react';
+import { GitRepository } from 'mobx-github';
 import { observer } from 'mobx-react';
 import { FC } from 'react';
 import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
 
-import { GitRepository } from '../../model/Repository';
 import { i18n } from '../../model/Translation';
 import { GitLogo } from './Logo';
 
