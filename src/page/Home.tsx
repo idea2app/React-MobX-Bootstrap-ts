@@ -36,7 +36,7 @@ class HomePage extends Component<
         homepage,
         html_url
     }: Project) => (
-        <Col className="mb-3" xs={12} sm={6} md={3} key={id}>
+        <Col className="mb-3" key={id}>
             <Card className="h-100">
                 <Card.Img variant="top" src={logo} />
                 <Card.Body>
@@ -78,7 +78,9 @@ class HomePage extends Component<
                         {t('welcome')} {guest}!
                     </h2>
                 )}
-                <Row>{list.map(this.renderProject)}</Row>
+                <Row xs={1} sm={2} lg={4}>
+                    {list.map(this.renderProject)}
+                </Row>
             </Container>
         );
     }

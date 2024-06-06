@@ -11,14 +11,14 @@
 
 ## Technology stack
 
--   Language: [TypeScript v5][9]
--   Component engine: [PReact v10][10]
--   State management: [MobX v6][11]
--   Component suite: [React Bootstrap v2][12]
--   HTTP Client: [KoAJAX v1][13]
--   PWA framework: [Workbox v7][14]
--   Package bundler: [Parcel v2][15]
--   CI / CD: GitHub [Actions][16] + [Pages][17]
+-   Language: [TypeScript v5][2]
+-   Component engine: [PReact v10][9]
+-   State management: [MobX v6][3]
+-   Component suite: [React Bootstrap v2][10]
+-   HTTP Client: [KoAJAX v1][11]
+-   PWA framework: [Workbox v7][12]
+-   Package bundler: [Parcel v2][13]
+-   CI / CD: GitHub [Actions][14] + [Pages][15]
 
 ## Extra components
 
@@ -31,13 +31,22 @@
 
 ## Best practice
 
-1.  Install **[Settings][19] GitHub app** in your account or organization
-2.  Click the **[Use this template][20] button** on the top of this GitHub repository's home page, then create your own repository in the app-installed namespace above
+1.  Install GitHub apps in your organization or account:
+
+    1.  [Probot settings][16]: set up Issue labels & Pull Request rules
+    2.  [PR badge][17]: set up Online [VS Code][18] editor entries in Pull Request description
+
+2.  Click the **[Use this template][19] button** on the top of this GitHub repository's home page, then create your own repository in the app-installed namespace above
+
 3.  Click the **[Open in GitHub codespaces][7] button** on the top of ReadMe file, then an **online VS Code development environment** will be started immediately
-4.  Set [Vercel variables][21] as [Repository secrets][22], then every commit will get an independent **Preview URL**
-5.  Recommend to add a [Notification step in GitHub actions][23] for your Team IM app
-6.  Remind the PMs & users of your product to submit **Feature/Enhancement** requests or **Bug** reports with [Issue forms][24] instead of IM messages or Mobile Phone calls
-7.  Collect all these issues into [Project kanbans][25], then create **Pull requests** & add `closes #issue_number` into its description for automation
+
+4.  Set [Vercel variables][20] as [Repository secrets][21], then every commit will get an independent **Preview URL**
+
+5.  Recommend to add a [Notification step in GitHub actions][22] for your Team IM app
+
+6.  Remind the PMs & users of your product to submit **Feature/Enhancement** requests or **Bug** reports with [Issue forms][23] instead of IM messages or Mobile Phone calls
+
+7.  Collect all these issues into [Project kanbans][24], then create **Pull requests** & add `closes #issue_number` into its description for automation
 
 ## Development
 
@@ -63,20 +72,19 @@ pnpm build
 [6]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions/workflows/main.yml
 [7]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
 [8]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
-[9]: https://www.typescriptlang.org/
-[10]: https://preactjs.com/
-[11]: https://mobx.js.org/
-[12]: https://react-bootstrap.github.io/
-[13]: https://github.com/EasyWebApp/KoAJAX
-[14]: https://developers.google.com/web/tools/workbox
-[15]: https://parceljs.org/
-[16]: https://github.com/features/actions
-[17]: https://pages.github.com/
-[18]: https://github.com/idea2app/React-Bootstrap-editor
-[19]: https://github.com/apps/settings
-[20]: https://github.com/new?template_name=React-MobX-Bootstrap-ts&template_owner=idea2app
-[21]: https://github.com/idea2app/Next-Bootstrap-ts/blob/80967ed49045af9dbcf4d3695a2c39d53a6f71f1/.github/workflows/pull-request.yml#L9-L11
-[22]: https://github.com/idea2app/React-MobX-Bootstrap-ts/settings/secrets/actions
-[23]: https://github.com/kaiyuanshe/kaiyuanshe.github.io/blob/bb4675a56bf1d6b207231313da5ed0af7cf0ebd6/.github/workflows/pull-request.yml#L32-L56
-[24]: https://github.com/idea2app/React-MobX-Bootstrap-ts/issues/new/choose
-[25]: https://github.com/idea2app/React-MobX-Bootstrap-ts/projects
+[9]: https://preactjs.com/
+[10]: https://react-bootstrap.github.io/
+[11]: https://github.com/EasyWebApp/KoAJAX
+[12]: https://developers.google.com/web/tools/workbox
+[13]: https://parceljs.org/
+[14]: https://github.com/features/actions
+[15]: https://pages.github.com/
+[16]: https://github.com/apps/settings
+[17]: https://pullrequestbadge.com/
+[18]: https://code.visualstudio.com/
+[19]: https://github.com/new?template_name=React-MobX-Bootstrap-ts&template_owner=idea2app
+[20]: https://github.com/idea2app/React-MobX-Bootstrap-ts/blob/8e796c6e7dc485fe4a68b59fcbffb9d224236bf4/.github/workflows/main.yml#L10-L12
+[21]: https://github.com/idea2app/React-MobX-Bootstrap-ts/settings/secrets/actions
+[22]: https://github.com/kaiyuanshe/kaiyuanshe.github.io/blob/bb4675a56bf1d6b207231313da5ed0af7cf0ebd6/.github/workflows/pull-request.yml#L32-L56
+[23]: https://github.com/idea2app/React-MobX-Bootstrap-ts/issues/new/choose
+[24]: https://github.com/idea2app/React-MobX-Bootstrap-ts/projects
