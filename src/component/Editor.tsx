@@ -1,4 +1,5 @@
 import { Editor as Core, EditorProps } from 'idea-react';
+import { FC } from 'react';
 
 import List from '@editorjs/list';
 import Code from '@editorjs/code';
@@ -16,6 +17,6 @@ const Tools = {
     quote: Quote
 };
 
-export default function Editor(props: Omit<EditorProps, 'tools'>) {
-    return <Core tools={Tools} {...props} />;
-}
+export const EditorJS: FC<Omit<EditorProps, 'tools'>> = props => (
+    <Core tools={Tools} {...props} />
+);

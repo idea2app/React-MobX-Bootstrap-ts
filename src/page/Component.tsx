@@ -11,7 +11,7 @@ import {
 } from 'idea-react';
 
 import { TSXSample } from '../component/TSXSample';
-import EditorJS from '../component/Editor';
+import { EditorJS } from '../component/Editor';
 import RichEditData from '../model/rich-edit.json';
 import { i18n } from '../model/Translation';
 
