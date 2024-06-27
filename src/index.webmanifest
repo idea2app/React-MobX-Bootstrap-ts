@@ -1,5 +1,5 @@
 {
-  "name": "React scaffold",
+  "name": "React-MobX-Bootstrap-TS",
   "short_name": "React Demo",
   "start_url": ".",
   "description": "React project scaffold based on TypeScript, MobX & Bootstrap, which is inspired by WebCell scaffold.",
