@@ -1,6 +1,6 @@
 ![](src/image/logo.png)
 
-# React-MobX-Bootstrap.ts
+# React-MobX-Bootstrap-ts
 
 [React][1] project scaffold based on [TypeScript][2], [MobX][3] & [Bootstrap][4], which is inspired by [WebCell scaffold][5].
 
@@ -36,9 +36,9 @@
     1.  [Probot settings][16]: set up Issue labels & Pull Request rules
     2.  [PR badge][17]: set up Online [VS Code][18] editor entries in Pull Request description
 
-2.  Click the **[Use this template][19] button** on the top of this GitHub repository's home page, then create your own repository in the app-installed namespace above
+2.  Click the **[<kbd>Use this template</kbd>][19] button** on the top of this GitHub repository's home page, then create your own repository in the app-installed namespace above
 
-3.  Click the **[Open in GitHub codespaces][7] button** on the top of ReadMe file, then an **online VS Code development environment** will be started immediately
+3.  Click the **[<kbd>Open in GitHub codespaces</kbd>][7] button** on the top of ReadMe file, then an **online VS Code development environment** will be started immediately
 
 4.  Set [Vercel variables][20] as [Repository secrets][21], then every commit will get an independent **Preview URL**
 
