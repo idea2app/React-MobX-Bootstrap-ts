@@ -48,7 +48,7 @@ importers:
         specifier: ^2.0.0-rc.2
         version: 2.0.0-rc.2(@types/react@18.3.5)(typescript@5.5.4)
       koajax:
-        specifier: ^3.0.2
+        specifier: ^3.0.0
         version: 3.0.2(typescript@5.5.4)
       lodash:
         specifier: ^4.17.21
@@ -141,6 +141,9 @@ importers:
       eslint-plugin-simple-import-sort:
         specifier: ^12.1.1
         version: 12.1.1(eslint@9.9.1)
+      eslint-plugin-spellcheck:
+        specifier: ^0.0.20
+        version: 0.0.20(eslint@9.9.1)
       globals:
         specifier: ^15.9.0
         version: 15.9.0
@@ -2335,6 +2338,11 @@ packages:
     peerDependencies:
       eslint: '>=5.0.0'
 
+  eslint-plugin-spellcheck@0.0.20:
+    resolution: {integrity: sha512-GJa6vgzWAYqe0elKADAsiBRrhvqBnKyt7tpFSqlCZJsK2W9+K80oMyHhKolA7vJ13H5RCGs5/KCN+mKUyKoAiA==}
+    peerDependencies:
+      eslint: '>=0.8.0'
+
   eslint-scope@8.0.2:
     resolution: {integrity: sha512-6E4xmrTw5wtxnLA5wYL3WDfhZ/1bUBGOXV0zQvVRDOtrR8D0p6W7fs3JweNYhwRYeGvd/1CKX2se0/2s7Q/nJA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2724,6 +2732,10 @@ packages:
 
   humanize-ms@1.2.1:
     resolution: {integrity: sha512-Fl70vYtsAFb/C06PTS9dZBo7ihau+Tu/DNCk/OyHhea07S+aeMWpFFkUaXRa8fI+ScZbEI8dfSxwY7gxZ9SAVQ==}
+
+  hunspell-spellchecker@1.0.2:
+    resolution: {integrity: sha512-4DwmFAvlz+ChsqLDsZT2cwBsYNXh+oWboemxXtafwKIyItq52xfR4e4kr017sLAoPaSYVofSOvPUfmOAhXyYvw==}
+    hasBin: true
 
   husky@9.1.5:
     resolution: {integrity: sha512-rowAVRUBfI0b4+niA4SJMhfQwc107VLkBUgEYYAOQAbqDCnra1nYh83hF/MDmhYs9t9n1E3DuKOrs2LYNC+0Ag==}
@@ -7624,6 +7636,13 @@ snapshots:
     dependencies:
       eslint: 9.9.1
 
+  eslint-plugin-spellcheck@0.0.20(eslint@9.9.1):
+    dependencies:
+      eslint: 9.9.1
+      globals: 13.24.0
+      hunspell-spellchecker: 1.0.2
+      lodash: 4.17.21
+
   eslint-scope@8.0.2:
     dependencies:
       esrecurse: 4.3.0
@@ -8107,6 +8126,8 @@ snapshots:
   humanize-ms@1.2.1:
     dependencies:
       ms: 2.1.3
+
+  hunspell-spellchecker@1.0.2: {}
 
   husky@9.1.5: {}
 

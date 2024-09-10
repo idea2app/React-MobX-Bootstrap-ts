@@ -1,16 +1,18 @@
+import typescriptPlugin from 'typescript-eslint';
 import globals from 'globals';
+
 import js from '@eslint/js';
 import json from '@eslint/json';
 import markdown from '@eslint/markdown';
-import tseslint from 'typescript-eslint';
 
-import react from 'eslint-plugin-react';
 import eslintConfigPrettier from 'eslint-config-prettier';
+import react from 'eslint-plugin-react';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
 
 export default [
     // import sort
     {
+        files: ['**/*.{js,ts,jsx,tsx}'],
         plugins: {
             'simple-import-sort': simpleImportSort
         },
@@ -19,14 +21,14 @@ export default [
             'simple-import-sort/imports': 'error'
         }
     },
-    // typescript
+    // TypeScript
     {
         files: ['**/*.{ts,tsx}'],
         plugins: {
-            '@typescript-eslint': tseslint.plugin
+            '@typescript-eslint': typescriptPlugin.plugin
         }
     },
-    // js
+    // JavaScript
     {
         name: 'eslint/js',
         files: ['**/*.{js,ts,jsx,tsx}'],
@@ -36,7 +38,7 @@ export default [
             'consistent-return': 'error'
         }
     },
-    // react
+    // React
     {
         name: 'react-jsx',
         files: ['**/*.{js,ts,jsx,tsx}'],
@@ -62,7 +64,7 @@ export default [
         language: 'json/json',
         plugins: { json }
     },
-    // markdown
+    // MarkDown
     {
         files: ['**/*.md'],
         language: 'markdown/gfm',
