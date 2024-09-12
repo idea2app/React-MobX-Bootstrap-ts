@@ -1,49 +1,50 @@
-import typescriptPlugin from 'typescript-eslint';
-import globals from 'globals';
+import url from 'node:url';
 
-import js from '@eslint/js';
-import json from '@eslint/json';
-import markdown from '@eslint/markdown';
-
+import { fixupPluginRules } from '@eslint/compat';
+import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import react from 'eslint-plugin-react';
-import simpleImportSort from 'eslint-plugin-simple-import-sort';
+import reactPlugin from 'eslint-plugin-react';
+import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
+import globals from 'globals';
+import tsEslint from 'typescript-eslint';
 
-export default [
-    // import sort
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+export default tsEslint.config(
+    // register all of the plugins up-front
     {
-        files: ['**/*.{js,ts,jsx,tsx}'],
         plugins: {
-            'simple-import-sort': simpleImportSort
+            ['@typescript-eslint']: tsEslint.plugin,
+            // https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
+            ['react']: fixupPluginRules(reactPlugin),
+            ['simple-import-sort']: simpleImportSortPlugin
+        }
+    },
+    {
+        // config with just ignores is the replacement for `.eslintignore`
+        ignores: ['**/node_modules/**', '**/dist/**']
+    },
+
+    // extends ...
+    eslint.configs.recommended,
+    ...tsEslint.configs.recommended,
+
+    // base config
+    {
+        languageOptions: {
+            globals: {
+                ...globals.es2020,
+                ...globals.browser
+            },
+            parserOptions: {
+                projectService: true,
+                tsconfigRootDir: __dirname,
+                warnOnUnsupportedTypeScriptVersion: false
+            }
         },
         rules: {
             'simple-import-sort/exports': 'error',
-            'simple-import-sort/imports': 'error'
-        }
-    },
-    // TypeScript
-    {
-        files: ['**/*.{ts,tsx}'],
-        plugins: {
-            '@typescript-eslint': typescriptPlugin.plugin
-        }
-    },
-    // JavaScript
-    {
-        name: 'eslint/js',
-        files: ['**/*.{js,ts,jsx,tsx}'],
-        languageOptions: { globals: globals.browser },
-        plugins: { js },
-        rules: {
-            'consistent-return': 'error'
-        }
-    },
-    // React
-    {
-        name: 'react-jsx',
-        files: ['**/*.{js,ts,jsx,tsx}'],
-        plugins: { react },
-        rules: {
+            'simple-import-sort/imports': 'error',
             'react/jsx-no-target-blank': 'warn',
             'react/jsx-sort-props': [
                 'error',
@@ -53,22 +54,20 @@ export default [
                     callbacksLast: true,
                     noSortAlphabetically: true
                 }
-            ]
+            ],
+            '@typescript-eslint/no-empty-object-type': 'off'
         }
     },
-    // JSON files
     {
-        name: 'eslint/json',
-        files: ['**/*.json', '.c8rc'],
-        ignores: ['**/package-lock.json'],
-        language: 'json/json',
-        plugins: { json }
-    },
-    // MarkDown
-    {
-        files: ['**/*.md'],
-        language: 'markdown/gfm',
-        plugins: { markdown }
+        files: ['**/*.js'],
+        extends: [tsEslint.configs.disableTypeChecked],
+        rules: {
+            // turn off other type-aware rules
+            '@typescript-eslint/internal/no-poorly-typed-ts-props': 'off',
+
+            // turn off rules that don't apply to JS code
+            '@typescript-eslint/explicit-function-return-type': 'off'
+        }
     },
     eslintConfigPrettier
-];
+);

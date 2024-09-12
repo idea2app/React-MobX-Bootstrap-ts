@@ -60,13 +60,13 @@ export class PaginationPage extends Component {
             <Container style={{ height: '91vh' }}>
                 <RestTable
                     className="h-100 text-center"
+                    columns={this.columns}
+                    store={repositoryStore}
+                    translator={i18n}
                     striped
                     hover
                     editable
                     deletable
-                    columns={this.columns}
-                    store={repositoryStore}
-                    translator={i18n}
                     onCheck={console.log}
                 />
             </Container>
