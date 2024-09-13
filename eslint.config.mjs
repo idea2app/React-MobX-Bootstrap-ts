@@ -1,5 +1,3 @@
-import url from 'node:url';
-
 import { fixupPluginRules } from '@eslint/compat';
 import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
@@ -7,6 +5,7 @@ import reactPlugin from 'eslint-plugin-react';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
+import url from 'url';
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -14,15 +13,15 @@ export default tsEslint.config(
     // register all of the plugins up-front
     {
         plugins: {
-            ['@typescript-eslint']: tsEslint.plugin,
+            '@typescript-eslint': tsEslint.plugin,
             // https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
-            ['react']: fixupPluginRules(reactPlugin),
-            ['simple-import-sort']: simpleImportSortPlugin
+            react: fixupPluginRules(reactPlugin),
+            'simple-import-sort': simpleImportSortPlugin
         }
     },
     {
         // config with just ignores is the replacement for `.eslintignore`
-        ignores: ['**/node_modules/**', '**/dist/**']
+        ignores: ['**/node_modules/**', '**/dist/**', '**/.parcel-cache/**']
     },
 
     // extends ...
@@ -34,7 +33,8 @@ export default tsEslint.config(
         languageOptions: {
             globals: {
                 ...globals.es2020,
-                ...globals.browser
+                ...globals.browser,
+                ...globals.node
             },
             parserOptions: {
                 projectService: true,

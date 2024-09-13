@@ -1,6 +1,6 @@
 import { textJoin } from 'mobx-i18n';
 import { observer } from 'mobx-react';
-import { FC, TargetedEvent } from 'react';
+import { FC, FormEvent } from 'react';
 import { Button, Container, FloatingLabel, Form } from 'react-bootstrap';
 import { formToJSON } from 'web-utility';
 
@@ -10,7 +10,7 @@ import { i18n } from '../model/Translation';
 
 const { t } = i18n;
 
-const addTask = async (event: TargetedEvent<HTMLFormElement>) => {
+const addTask = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const form = event.currentTarget;

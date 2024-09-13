@@ -45,6 +45,6 @@ export class GitLogo extends Component<GitLogoProps> {
         const { path } = this;
         const { name } = this.props;
 
-        return path && <Image fluid src={path} alt={name} />;
+        return path && <Image src={path} alt={name} fluid />;
     }
 }

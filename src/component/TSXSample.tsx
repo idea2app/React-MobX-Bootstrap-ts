@@ -1,10 +1,10 @@
-import { FC, PropsWithChildren } from 'react';
-import { CodeBlock } from 'idea-react';
-
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-jsx';
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-tsx';
+
+import { CodeBlock } from 'idea-react';
+import { FC, PropsWithChildren } from 'react';
 
 export type TSXSampleProps = PropsWithChildren<{
     title: string;

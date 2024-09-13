@@ -1,4 +1,4 @@
-import { RepositoryModel, githubClient } from 'mobx-github';
+import { githubClient, RepositoryModel } from 'mobx-github';
 import { Downloader } from 'mobx-restful';
 
 const GithubToken = process.env.GITHUB_TOKEN;

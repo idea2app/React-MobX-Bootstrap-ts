@@ -1,13 +1,13 @@
-import { HashRouter, Route, Routes } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { MainNavigator } from '../component/MainNavigator';
-import HomePage from './Home';
+import ChartPage from './chart.mdx';
 import { ComponentPage } from './Component';
+import { DownloaderPage } from './Downloader';
+import HomePage from './Home';
 import { PaginationPage } from './Pagination';
 import { ScrollListPage } from './ScrollList';
-import ChartPage from './chart.mdx';
-import { DownloaderPage } from './Downloader';
 
 export const PageFrame = () => (
     <>
