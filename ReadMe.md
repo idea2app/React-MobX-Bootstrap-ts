@@ -12,7 +12,7 @@
 ## Technology stack
 
 -   Language: [TypeScript v5][2]
--   Component engine: [React v18][9]
+-   Component engine: [React v18][1]
 -   State management: [MobX v6][3]
 -   Component suite: [React Bootstrap v2][10]
 -   HTTP Client: [KoAJAX v1][11]
