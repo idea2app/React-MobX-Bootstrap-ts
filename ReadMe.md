@@ -72,7 +72,6 @@ pnpm build
 [6]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions/workflows/main.yml
 [7]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
 [8]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
-[9]: https://react.dev/
 [10]: https://react-bootstrap.github.io/
 [11]: https://github.com/EasyWebApp/KoAJAX
 [12]: https://developers.google.com/web/tools/workbox
