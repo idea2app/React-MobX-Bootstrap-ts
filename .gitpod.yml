@@ -21,6 +21,8 @@ vscode:
         - eamodio.gitlens
         - github.vscode-pull-request-github
         - github.vscode-github-actions
+        - streetsidesoftware.code-spell-checker
+
 tasks:
     - init: pnpm i
       command: npm start

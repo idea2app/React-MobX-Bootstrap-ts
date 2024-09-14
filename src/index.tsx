@@ -1,6 +1,6 @@
 import { auto } from 'browser-unhandled-rejection';
 import { configure } from 'mobx';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { serviceWorkerUpdate } from 'web-utility';
 
 import { PageFrame } from './page';
@@ -35,4 +35,4 @@ serviceWorker?.addEventListener('controllerchange', () =>
     window.location.reload()
 );
 
-render(<PageFrame />, document.querySelector('#app'));
+createRoot(document.querySelector('#app')).render(<PageFrame />);

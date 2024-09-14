@@ -1,8 +1,7 @@
-import { Component } from 'react';
 import { observer } from 'mobx-react';
+import { Component } from 'react';
+import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
-
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 import project, { Project } from '../model/Project';
 import { i18n } from '../model/Translation';
@@ -36,7 +35,7 @@ class HomePage extends Component<
         homepage,
         html_url
     }: Project) => (
-        <Col className="mb-3" key={id}>
+        <Col key={id} className="mb-3">
             <Card className="h-100">
                 <Card.Img variant="top" src={logo} />
                 <Card.Body>

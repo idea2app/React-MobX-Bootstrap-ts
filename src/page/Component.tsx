@@ -1,17 +1,17 @@
+import {
+    Avatar,
+    EditorHTML,
+    Icon,
+    Nameplate,
+    TableSpinner,
+    TimeDistance
+} from 'idea-react';
 import { observer } from 'mobx-react';
 import { Container, Table } from 'react-bootstrap';
 import { Editor } from 'react-bootstrap-editor';
-import {
-    TimeDistance,
-    TableSpinner,
-    Icon,
-    Avatar,
-    Nameplate,
-    EditorHTML
-} from 'idea-react';
 
-import { TSXSample } from '../component/TSXSample';
 import { EditorJS } from '../component/Editor';
+import { TSXSample } from '../component/TSXSample';
 import RichEditData from '../model/rich-edit.json';
 import { i18n } from '../model/Translation';
 

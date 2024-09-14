@@ -12,7 +12,7 @@
 ## Technology stack
 
 -   Language: [TypeScript v5][2]
--   Component engine: [PReact v10][9]
+-   Component engine: [React v18][1]
 -   State management: [MobX v6][3]
 -   Component suite: [React Bootstrap v2][10]
 -   HTTP Client: [KoAJAX v1][11]
@@ -72,7 +72,6 @@ pnpm build
 [6]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions/workflows/main.yml
 [7]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
 [8]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
-[9]: https://preactjs.com/
 [10]: https://react-bootstrap.github.io/
 [11]: https://github.com/EasyWebApp/KoAJAX
 [12]: https://developers.google.com/web/tools/workbox
