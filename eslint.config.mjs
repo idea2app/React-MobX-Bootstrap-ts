@@ -1,22 +1,27 @@
-import { fixupPluginRules } from '@eslint/compat';
+import cspellPlugin from '@cspell/eslint-plugin';
 import eslint from '@eslint/js';
 import eslintConfigPrettier from 'eslint-config-prettier';
-import reactPlugin from 'eslint-plugin-react';
+import react from 'eslint-plugin-react';
 import simpleImportSortPlugin from 'eslint-plugin-simple-import-sort';
 import globals from 'globals';
 import tsEslint from 'typescript-eslint';
-import url from 'url';
+import { fileURLToPath } from 'url';
 
-const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+/**
+ * When using the ESLint extension, remember to check the "ESLint: Use Flat config" setting for instant code rule hints.
+ */
+
+const tsconfigRootDir = fileURLToPath(new URL('.', import.meta.url));
 
 export default tsEslint.config(
     // register all of the plugins up-front
     {
         plugins: {
             '@typescript-eslint': tsEslint.plugin,
-            // https://github.com/jsx-eslint/eslint-plugin-react/issues/3699
-            react: fixupPluginRules(reactPlugin),
-            'simple-import-sort': simpleImportSortPlugin
+            // - https://github.com/jsx-eslint/eslint-plugin-react/issues/3838#issuecomment-2395472758
+            react: /** @type {import('eslint').ESLint.Plugin} */ (react),
+            'simple-import-sort': simpleImportSortPlugin,
+            '@cspell': cspellPlugin
         }
     },
     {
@@ -38,13 +43,18 @@ export default tsEslint.config(
             },
             parserOptions: {
                 projectService: true,
-                tsconfigRootDir: __dirname,
+                tsconfigRootDir,
                 warnOnUnsupportedTypeScriptVersion: false
             }
         },
         rules: {
+            'arrow-body-style': ['error', 'as-needed'],
             'simple-import-sort/exports': 'error',
             'simple-import-sort/imports': 'error',
+            'react/jsx-curly-brace-presence': [
+                'error',
+                { props: 'never', children: 'never' }
+            ],
             'react/jsx-no-target-blank': 'warn',
             'react/jsx-sort-props': [
                 'error',
@@ -55,7 +65,27 @@ export default tsEslint.config(
                     noSortAlphabetically: true
                 }
             ],
-            '@typescript-eslint/no-empty-object-type': 'off'
+            'react/self-closing-comp': [
+                'error',
+                { component: true, html: true }
+            ],
+            '@typescript-eslint/no-empty-object-type': 'off',
+            '@cspell/spellchecker': [
+                'warn',
+                {
+                    cspell: {
+                        language: 'en',
+                        dictionaries: [
+                            'typescript',
+                            'node',
+                            'html',
+                            'css',
+                            'bash',
+                            'npm'
+                        ]
+                    }
+                }
+            ]
         }
     },
     {

@@ -17,5 +17,6 @@ const Tools = {
 };
 
 export const EditorJS: FC<Omit<EditorProps, 'tools'>> = props => (
+    // @ts-expect-error: https://github.com/editor-js/link/issues/88
     <Core tools={Tools} {...props} />
 );

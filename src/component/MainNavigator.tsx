@@ -7,7 +7,7 @@ import { i18n, LanguageName } from '../model/Translation';
 import * as style from './MainNavigator.module.less';
 
 export const MainNavigator = observer(() => {
-    const { t, currentLanguage } = i18n;
+    const { currentLanguage } = i18n;
 
     return (
         <Navbar
