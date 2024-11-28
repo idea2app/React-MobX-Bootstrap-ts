@@ -1,6 +1,6 @@
 import { Icon } from 'idea-react';
+import { DownloadTask } from 'mobx-downloader';
 import { observer } from 'mobx-react';
-import { DownloadTask } from 'mobx-restful/dist/Downloader/Task';
 import { FC } from 'react';
 import { Button, Card, ProgressBar } from 'react-bootstrap';
 

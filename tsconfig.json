@@ -9,7 +9,9 @@
         "lib": ["ES2023", "DOM"],
         "skipLibCheck": true,
         "checkJs": true,
-        "jsx": "react-jsx"
+        "allowJs": true,
+        "jsx": "react-jsx",
+        "outDir": "dist"
     },
     "include": ["src/**/*", "*.mjs"]
 }
