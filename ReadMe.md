@@ -11,28 +11,27 @@
 
 ## Technology stack
 
--   Language: [TypeScript v5][2]
--   Component engine: [React v18][1]
--   State management: [MobX v6][3]
--   Component suite: [React Bootstrap v2][10]
--   HTTP Client: [KoAJAX v1][11]
--   PWA framework: [Workbox v7][12]
--   Package bundler: [Parcel v2][13]
--   CI / CD: GitHub [Actions][14] + [Pages][15]
+- Language: [TypeScript v5][2]
+- Component engine: [React v19][1]
+- State management: [MobX v6][3]
+- Component suite: [React Bootstrap v2][10]
+- HTTP Client: [KoAJAX v3][11]
+- PWA framework: [Workbox v7][12]
+- Package bundler: [Parcel v2][13]
+- CI / CD: GitHub [Actions][14] + [Pages][15]
 
 ## Extra components
 
 1.  [Component Sample](src/component/TSXSample.tsx)
 2.  Rich-text editor
-    -   [HTML version][18]
-    -   [JSON version](src/component/Editor.tsx)
+    - [HTML version][18]
+    - [JSON version](src/component/Editor.tsx)
 3.  [GitHub logo](src/component/Git/Logo.tsx)
 4.  [GitHub card](src/component/Git/Card.tsx)
 
 ## Best practice
 
 1.  Install GitHub apps in your organization or account:
-
     1.  [Probot settings][16]: set up Issue labels & Pull Request rules
     2.  [PR badge][17]: set up Online [VS Code][18] editor entries in Pull Request description
 

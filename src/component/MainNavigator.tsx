@@ -45,7 +45,7 @@ export const MainNavigator = observer(() => {
                     <Select
                         value={currentLanguage}
                         onChange={key =>
-                            i18n.changeLanguage(key as typeof currentLanguage)
+                            i18n.loadLanguages(key as typeof currentLanguage)
                         }
                     >
                         {Object.entries(LanguageName).map(([key, name]) => (

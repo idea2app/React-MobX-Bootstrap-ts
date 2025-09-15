@@ -5,7 +5,7 @@ import { MainNavigator } from '../component/MainNavigator';
 import ChartPage from './chart.mdx';
 import { ComponentPage } from './Component';
 import { DownloaderPage } from './Downloader';
-import HomePage from './Home';
+import { HomePage } from './Home';
 import { PaginationPage } from './Pagination';
 import { ScrollListPage } from './ScrollList';
 

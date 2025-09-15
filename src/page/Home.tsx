@@ -8,8 +8,9 @@ import { i18n } from '../model/Translation';
 
 const { t } = i18n;
 
+@withRouter
 @observer
-class HomePage extends Component<
+export class HomePage extends Component<
     RouteComponentProps<{}, {}, { guest: string }>
 > {
     componentDidMount() {
@@ -84,5 +85,3 @@ class HomePage extends Component<
         );
     }
 }
-
-export default withRouter(HomePage);

@@ -19,7 +19,7 @@ export default tsEslint.config(
         plugins: {
             '@typescript-eslint': tsEslint.plugin,
             // - https://github.com/jsx-eslint/eslint-plugin-react/issues/3838#issuecomment-2395472758
-            react: /** @type {import('eslint').ESLint.Plugin} */ (react),
+            react: /** @type {import('eslint').ESLint.Plugin} */ react,
             'simple-import-sort': simpleImportSortPlugin,
             '@cspell': cspellPlugin
         }

@@ -13,5 +13,5 @@
         "jsx": "react-jsx",
         "outDir": "dist"
     },
-    "include": ["src/**/*", "*.mjs"]
+    "include": ["src/**/*", "*.ts"]
 }
