@@ -63,6 +63,12 @@ npm start
 pnpm build
 ```
 
+## Reference
+
+1. [Why you should use Class component?](https://www.zhihu.com/question/451424245/answer/2484559536)
+2. [Why you should use MobX?](https://www.zhihu.com/question/456685038/answer/3142780397)
+3. [Why you should use Parcel?](https://www.zhihu.com/question/618019180/answer/1960960965857240541)
+
 [1]: https://react.dev/
 [2]: https://www.typescriptlang.org/
 [3]: https://mobx.js.org/
