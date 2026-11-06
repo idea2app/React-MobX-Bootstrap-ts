@@ -1,61 +1,93 @@
-import { Option, Select } from 'idea-react';
+import {
+    Drawer,
+    Navbar,
+    NavbarBrand,
+    NavbarNav,
+    NavbarToggler,
+    NavLink,
+    Option,
+    Select
+} from 'idea-react';
+import { action, observable } from 'mobx';
 import { observer } from 'mobx-react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Component } from 'react';
 
 import { mainNavLinks } from '../meta';
 import { i18n, LanguageName } from '../model/Translation';
 import * as style from './MainNavigator.module.less';
 
-export const MainNavigator = observer(() => {
-    const { currentLanguage } = i18n;
+@observer
+export class MainNavigator extends Component {
+    @observable accessor open = false;
 
-    return (
-        <Navbar
-            style={{ zIndex: 1030 }}
-            bg="primary"
-            variant="dark"
-            sticky="top"
-            expand="lg"
-            collapseOnSelect
-        >
-            <Container>
-                <Navbar.Brand href=".">
-                    <img
-                        className={`${style.logo} me-2`}
-                        src="https://github.com/react-bootstrap.png"
+    toggle = action(() => (this.open = !this.open));
+
+    hide = action(() => (this.open = false));
+
+    render() {
+        const { currentLanguage } = i18n;
+
+        return (
+            <Navbar
+                className="sticky-top bg-primary"
+                style={{ zIndex: 1030 }}
+                theme="dark"
+                expand="lg"
+            >
+                <Container>
+                    <NavbarBrand href=".">
+                        <img
+                            className={`${style.logo} me-2`}
+                            src="https://github.com/idea2app.png"
+                            alt=""
+                        />
+                        {document.title}
+                    </NavbarBrand>
+
+                    <NavbarToggler
+                        expanded={this.open}
+                        aria-label="Toggle navigation"
+                        onClick={this.toggle}
                     />
-                    {document.title}
-                </Navbar.Brand>
 
-                <Navbar.Toggle aria-controls="navbar-inner" />
-
-                <Navbar.Collapse id="navbar-inner">
-                    <Nav className="me-auto">
-                        {mainNavLinks().map(({ title, href }) => (
-                            <Nav.Link
-                                key={title}
-                                className="text-white"
-                                href={href}
-                            >
-                                {title}
-                            </Nav.Link>
-                        ))}
-                    </Nav>
-
-                    <Select
-                        value={currentLanguage}
-                        onChange={key =>
-                            i18n.loadLanguages(key as typeof currentLanguage)
-                        }
+                    <Drawer
+                        className="w-100"
+                        bodyClassName="d-flex"
+                        title={document.title}
+                        responsive="lg"
+                        placement="end"
+                        open={this.open}
+                        onDismiss={this.hide}
                     >
-                        {Object.entries(LanguageName).map(([key, name]) => (
-                            <Option key={key} value={key}>
-                                {name}
-                            </Option>
-                        ))}
-                    </Select>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    );
-});
+                        <NavbarNav className="flex-fill">
+                            {mainNavLinks().map(({ title, href }) => (
+                                <NavLink
+                                    key={title}
+                                    href={href}
+                                    onClick={this.hide}
+                                >
+                                    {title}
+                                </NavLink>
+                            ))}
+                        </NavbarNav>
+
+                        <Select
+                            value={currentLanguage}
+                            onChange={key =>
+                                i18n.loadLanguages(
+                                    key as typeof currentLanguage
+                                )
+                            }
+                        >
+                            {Object.entries(LanguageName).map(([key, name]) => (
+                                <Option key={key} value={key}>
+                                    {name}
+                                </Option>
+                            ))}
+                        </Select>
+                    </Drawer>
+                </Container>
+            </Navbar>
+        );
+    }
+}

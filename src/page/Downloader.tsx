@@ -1,7 +1,7 @@
+import { Button, Container } from 'idea-react';
 import { textJoin } from 'mobx-i18n';
 import { observer } from 'mobx-react';
 import { FC, FormEvent } from 'react';
-import { Button, Container, FloatingLabel, Form } from 'react-bootstrap';
 import { formToJSON } from 'web-utility';
 
 import { Downloader } from '../component/Downloader';
@@ -27,21 +27,24 @@ export const DownloaderPage: FC = observer(() => (
     <Container>
         <h1 className="my-4">{textJoin(t('downloader'), t('examples'))}</h1>
 
-        <Form
+        <form
             className="d-flex align-items-center gap-3 mb-3"
             onSubmit={addTask}
         >
-            <FloatingLabel className="flex-fill" label="URL">
-                <Form.Control
+            <div className="form-floating flex-fill">
+                <input
+                    className="form-control"
+                    id="download-url"
                     placeholder="URL"
                     type="url"
                     name="path"
                     required
                 />
-            </FloatingLabel>
+                <label htmlFor="download-url">URL</label>
+            </div>
 
             <Button type="submit">+</Button>
-        </Form>
+        </form>
 
         <Downloader />
     </Container>

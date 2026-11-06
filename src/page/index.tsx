@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import { Container } from 'idea-react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { MainNavigator } from '../component/MainNavigator';

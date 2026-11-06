@@ -1,6 +1,16 @@
+import {
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardText,
+    CardTitle,
+    Col,
+    Container,
+    Row
+} from 'idea-react';
 import { observer } from 'mobx-react';
 import { Component } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
 import project, { Project } from '../model/Project';
@@ -18,7 +28,7 @@ export class HomePage extends Component<
             'facebook/react',
             'microsoft/TypeScript',
             'mobxjs/mobx',
-            'react-bootstrap/react-bootstrap',
+            'idea2app/Idea-React',
             'EasyWebApp/KoAJAX',
             'idea2app/ECharts-JSX'
         );
@@ -38,14 +48,14 @@ export class HomePage extends Component<
     }: Project) => (
         <Col key={id} className="mb-3">
             <Card className="h-100">
-                <Card.Img variant="top" src={logo} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>{description}</Card.Text>
-                </Card.Body>
-                <Card.Footer className="d-flex justify-content-between">
+                <img className="card-img-top" src={logo} alt={name} />
+                <CardBody>
+                    <CardTitle>{name}</CardTitle>
+                    <CardText>{description}</CardText>
+                </CardBody>
+                <CardFooter className="d-flex justify-content-between">
                     <Button
-                        variant="primary"
+                        theme="primary"
                         size="sm"
                         target="_blank"
                         href={homepage}
@@ -53,14 +63,14 @@ export class HomePage extends Component<
                         {t('home_page')}
                     </Button>
                     <Button
-                        variant="success"
+                        theme="success"
                         size="sm"
                         target="_blank"
                         href={html_url}
                     >
                         {t('source_code')}
                     </Button>
-                </Card.Footer>
+                </CardFooter>
             </Card>
         </Col>
     );
@@ -78,7 +88,7 @@ export class HomePage extends Component<
                         {t('welcome')} {guest}!
                     </h2>
                 )}
-                <Row xs={1} sm={2} lg={4}>
+                <Row cols={1} sm={2} lg={4}>
                     {list.map(this.renderProject)}
                 </Row>
             </Container>

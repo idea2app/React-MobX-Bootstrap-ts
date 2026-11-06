@@ -1,5 +1,6 @@
 import {
     Avatar,
+    Container,
     EditorHTML,
     Icon,
     Nameplate,
@@ -7,15 +8,12 @@ import {
     TimeDistance
 } from 'idea-react';
 import { observer } from 'mobx-react';
-import { Container, Table } from 'react-bootstrap';
 import { Editor } from 'react-bootstrap-editor';
 
 import { EditorJS } from '../component/Editor';
 import { TSXSample } from '../component/TSXSample';
 import RichEditData from '../model/rich-edit.json';
 import { i18n } from '../model/Translation';
-
-Table.displayName = 'Table';
 
 const { t } = i18n;
 
@@ -43,7 +41,7 @@ export const ComponentPage = observer(() => (
         </TSXSample>
 
         <TSXSample title="Table spinner">
-            <Table className="text-center" striped hover>
+            <table className="table text-center table-striped table-hover">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -53,11 +51,11 @@ export const ComponentPage = observer(() => (
                 <tbody>
                     <TableSpinner colSpan={2} />
                 </tbody>
-            </Table>
+            </table>
         </TSXSample>
 
         <TSXSample title="Rich-text editor (HTML)">
-            <Editor defaultValue="<p>test</p>" onChange={console.log} />
+            <Editor defaultValue="<p>test</p>" onChange={console.info} />
         </TSXSample>
 
         <TSXSample title="Rich-text editor (JSON)">

@@ -1,23 +1,38 @@
-import { Icon } from 'idea-react';
+import {
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardTitle,
+    Icon
+} from 'idea-react';
 import { DownloadTask } from 'mobx-downloader';
 import { observer } from 'mobx-react';
 import { FC } from 'react';
-import { Button, Card, ProgressBar } from 'react-bootstrap';
 
 import { downloader } from '../model/service';
 
 export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
     <Card>
-        <Card.Body>
-            <Card.Title>{task.name}</Card.Title>
-            <ProgressBar
-                striped={task.percent < 100}
-                animated={task.executing}
-                now={task.percent}
-                label={`${task.percent}%`}
-            />
-        </Card.Body>
-        <Card.Footer className="d-flex justify-content-between align-items-center">
+        <CardBody>
+            <CardTitle>{task.name}</CardTitle>
+            <div
+                className="progress"
+                role="progressbar"
+                aria-label={task.name}
+                aria-valuenow={task.percent}
+                aria-valuemin={0}
+                aria-valuemax={100}
+            >
+                <div
+                    className={`progress-bar${task.percent < 100 ? ' progress-bar-striped' : ''}${task.executing ? ' progress-bar-animated' : ''}`}
+                    style={{ width: `${task.percent}%` }}
+                >
+                    {task.percent}%
+                </div>
+            </div>
+        </CardBody>
+        <CardFooter className="d-flex justify-content-between align-items-center">
             <small>
                 {task.loadedSize.toShortString()} /{' '}
                 {task.totalSize.toShortString()}
@@ -27,7 +42,7 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
                     (task.executing ? (
                         <Button
                             size="sm"
-                            variant="warning"
+                            theme="warning"
                             onClick={() => task.pause()}
                         >
                             <Icon name="pause" />
@@ -35,7 +50,7 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
                     ) : (
                         <Button
                             size="sm"
-                            variant="success"
+                            theme="success"
                             onClick={() => task.start()}
                         >
                             <Icon name="play" />
@@ -43,14 +58,14 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
                     ))}
                 <Button
                     size="sm"
-                    variant="danger"
+                    theme="danger"
                     disabled={task.executing}
                     onClick={() => downloader.destroyTask(task.name)}
                 >
                     <Icon name="trash" />
                 </Button>
             </div>
-        </Card.Footer>
+        </CardFooter>
     </Card>
 ));
 
