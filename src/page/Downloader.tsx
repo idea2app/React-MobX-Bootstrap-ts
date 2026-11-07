@@ -1,4 +1,11 @@
-import { Button, Container } from 'idea-react';
+import {
+    Button,
+    Container,
+    Form,
+    FormControl,
+    FormFloatingLabel,
+    FormLabel
+} from 'idea-react';
 import { textJoin } from 'mobx-i18n';
 import { observer } from 'mobx-react';
 import { FC, FormEvent } from 'react';
@@ -27,24 +34,25 @@ export const DownloaderPage: FC = observer(() => (
     <Container>
         <h1 className="my-4">{textJoin(t('downloader'), t('examples'))}</h1>
 
-        <form
+        <Form
             className="d-flex align-items-center gap-3 mb-3"
             onSubmit={addTask}
         >
-            <div className="form-floating flex-fill">
-                <input
-                    className="form-control"
+            <FormFloatingLabel className="flex-fill">
+                <FormLabel htmlFor="download-url" plain>
+                    URL
+                </FormLabel>
+                <FormControl
                     id="download-url"
                     placeholder="URL"
                     type="url"
                     name="path"
                     required
                 />
-                <label htmlFor="download-url">URL</label>
-            </div>
+            </FormFloatingLabel>
 
             <Button type="submit">+</Button>
-        </form>
+        </Form>
 
         <Downloader />
     </Container>

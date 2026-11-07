@@ -3,6 +3,7 @@ import {
     Card,
     CardBody,
     CardFooter,
+    CardImage,
     CardText,
     CardTitle,
     Col,
@@ -48,7 +49,7 @@ export class HomePage extends Component<
     }: Project) => (
         <Col key={id} className="mb-3">
             <Card className="h-100">
-                <img className="card-img-top" src={logo} alt={name} />
+                <CardImage placement="top" src={logo} alt={name} />
                 <CardBody>
                     <CardTitle>{name}</CardTitle>
                     <CardText>{description}</CardText>
@@ -80,7 +81,7 @@ export class HomePage extends Component<
             { list } = project;
 
         return (
-            <Container fluid="md">
+            <Container fluid>
                 <h1 className="my-4">{t('upstream_projects')}</h1>
 
                 {guest && (

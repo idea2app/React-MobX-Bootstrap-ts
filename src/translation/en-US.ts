@@ -16,6 +16,7 @@ export default {
     deploy: 'Deploy',
 
     // REST table
+    view: 'View',
     create: 'Create',
     submit: 'Submit',
     cancel: 'Cancel',

@@ -4,7 +4,8 @@ import {
     CardBody,
     CardFooter,
     CardTitle,
-    Icon
+    Icon,
+    Progress
 } from 'idea-react';
 import { DownloadTask } from 'mobx-downloader';
 import { observer } from 'mobx-react';
@@ -16,21 +17,13 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
     <Card>
         <CardBody>
             <CardTitle>{task.name}</CardTitle>
-            <div
-                className="progress"
-                role="progressbar"
-                aria-label={task.name}
-                aria-valuenow={task.percent}
-                aria-valuemin={0}
-                aria-valuemax={100}
+            <Progress
+                striped={task.percent < 100}
+                animated={task.executing}
+                value={task.percent}
             >
-                <div
-                    className={`progress-bar${task.percent < 100 ? ' progress-bar-striped' : ''}${task.executing ? ' progress-bar-animated' : ''}`}
-                    style={{ width: `${task.percent}%` }}
-                >
-                    {task.percent}%
-                </div>
-            </div>
+                {task.percent}%
+            </Progress>
         </CardBody>
         <CardFooter className="d-flex justify-content-between align-items-center">
             <small>

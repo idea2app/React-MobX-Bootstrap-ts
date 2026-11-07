@@ -6,7 +6,7 @@
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
-        "lib": ["ES2023", "DOM"],
+        "lib": ["ES2023", "DOM", "DOM.Iterable"],
         "skipLibCheck": true,
         "checkJs": true,
         "allowJs": true,

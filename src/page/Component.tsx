@@ -4,6 +4,7 @@ import {
     EditorHTML,
     Icon,
     Nameplate,
+    Table,
     TableSpinner,
     TimeDistance
 } from 'idea-react';
@@ -18,7 +19,7 @@ import { i18n } from '../model/Translation';
 const { t } = i18n;
 
 export const ComponentPage = observer(() => (
-    <Container className="my-3" fluid="md">
+    <Container className="my-3" fluid>
         <h1>{t('component')}</h1>
 
         <TSXSample title="Time Distance">
@@ -41,7 +42,7 @@ export const ComponentPage = observer(() => (
         </TSXSample>
 
         <TSXSample title="Table spinner">
-            <table className="table text-center table-striped table-hover">
+            <Table className="text-center" striped hover>
                 <thead>
                     <tr>
                         <th>#</th>
@@ -51,7 +52,7 @@ export const ComponentPage = observer(() => (
                 <tbody>
                     <TableSpinner colSpan={2} />
                 </tbody>
-            </table>
+            </Table>
         </TSXSample>
 
         <TSXSample title="Rich-text editor (HTML)">

@@ -16,6 +16,7 @@ export default {
     deploy: '部署',
 
     // REST table
+    view: '查看',
     create: '新增',
     submit: '提交',
     cancel: '取消',
