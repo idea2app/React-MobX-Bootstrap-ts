@@ -22,7 +22,7 @@ const { t } = i18n;
 @withRouter
 @observer
 export class HomePage extends Component<
-    RouteComponentProps<{}, {}, { guest: string }>
+    RouteComponentProps<{}, {}, { guest?: string }>
 > {
     componentDidMount() {
         project.getList(
@@ -59,7 +59,7 @@ export class HomePage extends Component<
                         theme="primary"
                         size="sm"
                         target="_blank"
-                        href={homepage}
+                        href={homepage ?? undefined}
                     >
                         {t('home_page')}
                     </Button>
@@ -77,11 +77,11 @@ export class HomePage extends Component<
     );
 
     render() {
-        const { guest } = this.props.query,
+        const { guest } = this.props.query || {},
             { list } = project;
 
         return (
-            <Container fluid>
+            <Container>
                 <h1 className="my-4">{t('upstream_projects')}</h1>
 
                 {guest && (

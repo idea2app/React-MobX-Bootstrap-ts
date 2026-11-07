@@ -2,11 +2,12 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "ES2020",
-        "moduleResolution": "Node",
+        "moduleResolution": "bundler",
         "allowSyntheticDefaultImports": true,
         "resolveJsonModule": true,
         "useDefineForClassFields": true,
         "lib": ["ES2023", "DOM", "DOM.Iterable"],
+        "types": ["node"],
         "skipLibCheck": true,
         "checkJs": true,
         "allowJs": true,

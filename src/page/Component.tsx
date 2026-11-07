@@ -19,7 +19,7 @@ import { i18n } from '../model/Translation';
 const { t } = i18n;
 
 export const ComponentPage = observer(() => (
-    <Container className="my-3" fluid>
+    <Container className="my-3">
         <h1>{t('component')}</h1>
 
         <TSXSample title="Time Distance">
