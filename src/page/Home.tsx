@@ -89,7 +89,7 @@ export class HomePage extends Component<
                         {t('welcome')} {guest}!
                     </h2>
                 )}
-                <Row cols={1} sm={2} lg={4}>
+                <Row xs={1} sm={2} lg={4}>
                     {list.map(this.renderProject)}
                 </Row>
             </Container>

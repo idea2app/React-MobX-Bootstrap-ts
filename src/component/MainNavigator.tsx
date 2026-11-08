@@ -1,13 +1,13 @@
 import {
+    Combobox,
+    ComboboxOption,
     Container,
     Drawer,
     Navbar,
     NavbarBrand,
     NavbarNav,
     NavbarToggler,
-    NavLink,
-    Option,
-    Select
+    NavLink
 } from 'idea-react';
 import { action, observable } from 'mobx';
 import { observer } from 'mobx-react';
@@ -34,18 +34,20 @@ export class MainNavigator extends Component {
                     </NavLink>
                 ))}
             </NavbarNav>
-            <Select
+            <Combobox
+                name="language"
                 value={i18n.currentLanguage}
-                onChange={key =>
-                    i18n.loadLanguages(key as typeof i18n.currentLanguage)
-                }
+                onChange={key => {
+                    if (typeof key === 'string')
+                        i18n.loadLanguages(key as typeof i18n.currentLanguage);
+                }}
             >
                 {Object.entries(LanguageName).map(([key, name]) => (
-                    <Option key={key} value={key}>
+                    <ComboboxOption key={key} value={key}>
                         {name}
-                    </Option>
+                    </ComboboxOption>
                 ))}
-            </Select>{' '}
+            </Combobox>{' '}
         </>
     );
 

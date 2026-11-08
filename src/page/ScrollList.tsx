@@ -15,7 +15,7 @@ export const ScrollListPage: FC = observer(() => (
             translator={i18n}
             store={repositoryStore}
             renderList={allItems => (
-                <Row as="ul" className="list-unstyled g-4" cols={1} sm={2}>
+                <Row as="ul" className="list-unstyled g-4" xs={1} sm={2}>
                     {allItems.map(item => (
                         <Col key={item.id} as="li">
                             <GitCard className="h-100 shadow-sm" {...item} />

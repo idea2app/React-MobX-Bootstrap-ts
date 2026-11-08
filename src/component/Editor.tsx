@@ -4,9 +4,10 @@ import Image from '@editorjs/image';
 import LinkTool from '@editorjs/link';
 import List from '@editorjs/list';
 import Quote from '@editorjs/quote';
-import { Editor as Core, EditorProps } from 'idea-react';
-import { FC } from 'react';
+import { ComponentProps, FC } from 'react';
+import { createReactEditorJS } from 'react-editor-js';
 
+const Core = createReactEditorJS();
 const Tools = {
     list: List,
     code: Code,
@@ -16,7 +17,9 @@ const Tools = {
     quote: Quote
 };
 
-export const EditorJS: FC<Omit<EditorProps, 'tools'>> = props => (
+export const EditorJS: FC<
+    Omit<ComponentProps<typeof Core>, 'tools'>
+> = props => (
     // @ts-expect-error: https://github.com/editor-js/link/issues/88
     <Core tools={Tools} {...props} />
 );

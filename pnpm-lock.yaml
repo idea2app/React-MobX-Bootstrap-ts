@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+overrides:
+  mobx-restful-table@3.0.0-rc.0>idea-react: 3.0.0-beta.3
+
 importers:
 
   .:
@@ -41,12 +44,9 @@ importers:
       echarts-jsx:
         specifier: ^1.3.1
         version: 1.3.1(typescript@6.0.3)
-      editorjs-html:
-        specifier: ^4.0.5
-        version: 4.0.5
       idea-react:
-        specifier: ^3.0.0-beta.3
-        version: 3.0.0-beta.3(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))(mobx-react@10.0.3(@preact/compat@18.3.2(preact@11.2.0))(mobx@7.1.5))(mobx@7.1.5)(react-element-to-jsx-string@18.0.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0)))(typescript@6.0.3)
+        specifier: ^3.0.0-rc.0
+        version: 3.0.0-rc.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))(mobx-react@10.0.3(@preact/compat@18.3.2(preact@11.2.0))(mobx@7.1.5))(mobx@7.1.5)(react-element-to-jsx-string@18.0.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0)))(typescript@6.0.3)
       koajax:
         specifier: ^3.3.1
         version: 3.3.1(typescript@6.0.3)
@@ -3236,6 +3236,15 @@ packages:
 
   idea-react@3.0.0-beta.3:
     resolution: {integrity: sha512-QC719UeaY0uJdI1ZlYWaO59mKZnx4BElMFHigeRroPit6NVY7CxwEm1J14pqGcdkqMJwGruH6942bHsDV2ajkw==}
+    peerDependencies:
+      mobx: '>=6'
+      mobx-react: '>=9'
+      react: '>=16'
+      react-dom: '>=16.4.2'
+      react-element-to-jsx-string: '>=15'
+
+  idea-react@3.0.0-rc.0:
+    resolution: {integrity: sha512-WEs9LxKhMmN8DibjBwTgPKXrpox4P+rbR5ZkdvjO9FDE1JFaFQ1oj/Hws5pbZMxnnEmPZrLakELzQPQMC5nTFQ==}
     peerDependencies:
       mobx: '>=6'
       mobx-react: '>=9'
@@ -9056,6 +9065,32 @@ snapshots:
       react: '@preact/compat@18.3.2(preact@11.2.0)'
       react-dom: '@preact/compat@18.3.2(preact@11.2.0)'
       react-editor-js: 2.1.0(@editorjs/editorjs@2.31.7)(@editorjs/paragraph@2.11.7)(@preact/compat@18.3.2(preact@11.2.0))
+      react-element-to-jsx-string: 18.0.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))
+      react-live: 5.0.1(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))
+      shiki: 4.6.0
+      vanilla-calendar-pro: 3.4.0
+      web-utility: 4.8.1(typescript@6.0.3)
+    transitivePeerDependencies:
+      - '@floating-ui/dom'
+      - element-internals-polyfill
+      - typescript
+
+  idea-react@3.0.0-rc.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))(mobx-react@10.0.3(@preact/compat@18.3.2(preact@11.2.0))(mobx@7.1.5))(mobx@7.1.5)(react-element-to-jsx-string@18.0.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0)))(typescript@6.0.3):
+    dependencies:
+      '@shikijs/langs': 4.6.0
+      '@shikijs/themes': 4.6.0
+      '@swc/helpers': 0.5.24
+      bootstrap: 6.0.0-alpha.1(vanilla-calendar-pro@3.4.0)
+      classnames: 2.5.1
+      html2canvas: 1.4.1
+      iterable-observer: 1.1.1
+      lodash: 4.18.1
+      marked: 18.1.3
+      mobx: 7.1.5
+      mobx-react: 10.0.3(@preact/compat@18.3.2(preact@11.2.0))(mobx@7.1.5)
+      mobx-react-helper: 0.5.4(@preact/compat@18.3.2(preact@11.2.0))(mobx@7.1.5)(typescript@6.0.3)
+      react: '@preact/compat@18.3.2(preact@11.2.0)'
+      react-dom: '@preact/compat@18.3.2(preact@11.2.0)'
       react-element-to-jsx-string: 18.0.0(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))
       react-live: 5.0.1(@preact/compat@18.3.2(preact@11.2.0))(@preact/compat@18.3.2(preact@11.2.0))
       shiki: 4.6.0

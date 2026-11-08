@@ -1,8 +1,8 @@
 import {
     Avatar,
     Container,
-    EditorHTML,
     Icon,
+    MarkdownView,
     Nameplate,
     Table,
     TableSpinner,
@@ -60,11 +60,13 @@ export const ComponentPage = observer(() => (
         </TSXSample>
 
         <TSXSample title="Rich-text editor (JSON)">
-            <EditorJS name="content" defaultValue={RichEditData} />
+            <EditorJS defaultValue={RichEditData} />
         </TSXSample>
 
-        <TSXSample title="Editor HTML">
-            <EditorHTML data={RichEditData} />
+        <TSXSample title="Markdown view">
+            <MarkdownView>
+                {'## Markdown demo\n\nRendered with **Idea React**.'}
+            </MarkdownView>
         </TSXSample>
     </Container>
 ));
