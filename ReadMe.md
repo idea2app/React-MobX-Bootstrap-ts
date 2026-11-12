@@ -11,10 +11,10 @@
 
 ## Technology stack
 
-- Language: [TypeScript v5][2]
-- Component engine: [React v19][1]
-- State management: [MobX v6][3]
-- Component suite: [React Bootstrap v2][10]
+- Language: [TypeScript v6][2]
+- Component engine: [Preact v11][9] with React compatibility
+- State management: [MobX v7][3]
+- Component suite: [Idea React v3][10] on [Bootstrap v6][4]
 - HTTP Client: [KoAJAX v3][11]
 - PWA framework: [Workbox v7][12]
 - Package bundler: [Parcel v2][13]
@@ -77,7 +77,8 @@ pnpm build
 [6]: https://github.com/idea2app/React-MobX-Bootstrap-ts/actions/workflows/main.yml
 [7]: https://codespaces.new/idea2app/React-MobX-Bootstrap-ts
 [8]: https://gitpod.io/?autostart=true#https://github.com/idea2app/React-MobX-Bootstrap-ts
-[10]: https://react-bootstrap.github.io/
+[9]: https://preactjs.com/
+[10]: https://idea-react.pages.dev/
 [11]: https://github.com/EasyWebApp/KoAJAX
 [12]: https://developers.google.com/web/tools/workbox
 [13]: https://parceljs.org/

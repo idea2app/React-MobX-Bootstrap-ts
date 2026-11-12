@@ -1,4 +1,6 @@
-import { Container } from 'react-bootstrap';
+import '@khmyznikov/pwa-install';
+
+import { Container } from 'idea-react';
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import { MainNavigator } from '../component/MainNavigator';
@@ -11,6 +13,8 @@ import { ScrollListPage } from './ScrollList';
 
 export const PageFrame = () => (
     <>
+        <pwa-install manifest-url="index.webmanifest" />
+
         <MainNavigator />
 
         <HashRouter>

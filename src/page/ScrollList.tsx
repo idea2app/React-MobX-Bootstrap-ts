@@ -1,7 +1,7 @@
+import { Col, Container, Row } from 'idea-react';
 import { observer } from 'mobx-react';
 import { ScrollList } from 'mobx-restful-table';
 import { FC } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
 
 import { GitCard } from '../component/Git/Card';
 import { repositoryStore } from '../model/service';

@@ -1,10 +1,9 @@
-import { text2color } from 'idea-react';
+import { Badge, Container, text2color } from 'idea-react';
 import { computed } from 'mobx';
 import { GitRepository } from 'mobx-github';
 import { observer } from 'mobx-react';
 import { Column, RestTable } from 'mobx-restful-table';
 import { Component } from 'react';
-import { Badge, Container } from 'react-bootstrap';
 
 import { repositoryStore } from '../model/service';
 import { i18n } from '../model/Translation';
@@ -37,7 +36,7 @@ export class PaginationPage extends Component {
                                 key={topic}
                                 as="a"
                                 className="me-2 text-decoration-none"
-                                bg={text2color(topic, ['light'])}
+                                theme={text2color(topic, ['light'])}
                                 target="_blank"
                                 href={`https://github.com/topics/${topic}`}
                             >
@@ -67,7 +66,7 @@ export class PaginationPage extends Component {
                     hover
                     editable
                     deletable
-                    onCheck={console.log}
+                    onCheck={console.info}
                 />
             </Container>
         );

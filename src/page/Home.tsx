@@ -1,24 +1,33 @@
+import {
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardImage,
+    CardText,
+    CardTitle,
+    Col,
+    Container,
+    Row
+} from 'idea-react';
 import { observer } from 'mobx-react';
 import { Component } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
 import project, { Project } from '../model/Project';
-import { i18n } from '../model/Translation';
-
-const { t } = i18n;
+import { t } from '../model/Translation';
 
 @withRouter
 @observer
 export class HomePage extends Component<
-    RouteComponentProps<{}, {}, { guest: string }>
+    RouteComponentProps<{}, {}, { guest?: string }>
 > {
     componentDidMount() {
         project.getList(
             'facebook/react',
             'microsoft/TypeScript',
             'mobxjs/mobx',
-            'react-bootstrap/react-bootstrap',
+            'idea2app/Idea-React',
             'EasyWebApp/KoAJAX',
             'idea2app/ECharts-JSX'
         );
@@ -38,39 +47,41 @@ export class HomePage extends Component<
     }: Project) => (
         <Col key={id} className="mb-3">
             <Card className="h-100">
-                <Card.Img variant="top" src={logo} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>{description}</Card.Text>
-                </Card.Body>
-                <Card.Footer className="d-flex justify-content-between">
+                <CardImage placement="top" src={logo} alt={name} />
+                <CardBody>
+                    <CardTitle>{name}</CardTitle>
+                    <CardText>{description}</CardText>
+                </CardBody>
+                <CardFooter className="d-flex justify-content-between">
                     <Button
-                        variant="primary"
+                        variant="solid"
+                        theme="primary"
                         size="sm"
                         target="_blank"
-                        href={homepage}
+                        href={homepage ?? undefined}
                     >
                         {t('home_page')}
                     </Button>
                     <Button
-                        variant="success"
+                        variant="solid"
+                        theme="success"
                         size="sm"
                         target="_blank"
                         href={html_url}
                     >
                         {t('source_code')}
                     </Button>
-                </Card.Footer>
+                </CardFooter>
             </Card>
         </Col>
     );
 
     render() {
-        const { guest } = this.props.query,
+        const { guest } = this.props.query || {},
             { list } = project;
 
         return (
-            <Container fluid="md">
+            <Container>
                 <h1 className="my-4">{t('upstream_projects')}</h1>
 
                 {guest && (

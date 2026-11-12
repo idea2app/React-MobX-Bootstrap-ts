@@ -1,14 +1,25 @@
-import { text2color } from 'idea-react';
+import {
+    Badge,
+    Button,
+    Card,
+    CardBody,
+    CardFooter,
+    CardText,
+    CardTitle,
+    Col,
+    Row,
+    text2color
+} from 'idea-react';
 import { GitRepository } from 'mobx-github';
 import { observer } from 'mobx-react';
 import { FC } from 'react';
-import { Badge, Button, Card, Col, Row } from 'react-bootstrap';
 
 import { i18n } from '../../model/Translation';
 import { GitLogo } from './Logo';
 
 export interface GitCardProps
-    extends Pick<GitRepository, 'full_name' | 'html_url' | 'languages'>,
+    extends
+        Pick<GitRepository, 'full_name' | 'html_url' | 'languages'>,
         Partial<Pick<GitRepository, 'topics' | 'description' | 'homepage'>> {
     className?: string;
 }
@@ -24,19 +35,19 @@ export const GitCard: FC<GitCardProps> = observer(
         homepage
     }) => (
         <Card className={className}>
-            <Card.Body className="d-flex flex-column gap-3">
-                <Card.Title as="h3" className="h5">
+            <CardBody className="d-flex flex-column gap-3">
+                <CardTitle as="h3" className="h5">
                     <a target="_blank" href={html_url} rel="noreferrer">
                         {full_name}
                     </a>
-                </Card.Title>
+                </CardTitle>
 
                 <nav className="flex-fill">
                     {topics.map(topic => (
                         <Badge
                             key={topic}
                             className="text-decoration-none me-1"
-                            bg={text2color(topic, ['light'])}
+                            theme={text2color(topic, ['light'])}
                             as="a"
                             target="_blank"
                             href={`https://github.com/topics/${topic}`}
@@ -52,15 +63,20 @@ export const GitCard: FC<GitCardProps> = observer(
                         </Col>
                     ))}
                 </Row>
-                <Card.Text>{description}</Card.Text>
-            </Card.Body>
-            <Card.Footer className="d-flex justify-content-between align-items-center">
+                <CardText>{description}</CardText>
+            </CardBody>
+            <CardFooter className="d-flex justify-content-between align-items-center">
                 {homepage && (
-                    <Button variant="success" target="_blank" href={homepage}>
+                    <Button
+                        variant="solid"
+                        theme="success"
+                        target="_blank"
+                        href={homepage}
+                    >
                         {i18n.t('home_page')}
                     </Button>
                 )}
-            </Card.Footer>
+            </CardFooter>
         </Card>
     )
 );

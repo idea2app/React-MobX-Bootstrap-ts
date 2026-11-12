@@ -1,26 +1,21 @@
 import {
     Avatar,
-    EditorHTML,
+    Container,
     Icon,
+    MarkdownView,
     Nameplate,
+    Table,
     TableSpinner,
     TimeDistance
 } from 'idea-react';
 import { observer } from 'mobx-react';
-import { Container, Table } from 'react-bootstrap';
 import { Editor } from 'react-bootstrap-editor';
 
-import { EditorJS } from '../component/Editor';
 import { TSXSample } from '../component/TSXSample';
-import RichEditData from '../model/rich-edit.json';
-import { i18n } from '../model/Translation';
-
-Table.displayName = 'Table';
-
-const { t } = i18n;
+import { t } from '../model/Translation';
 
 export const ComponentPage = observer(() => (
-    <Container className="my-3" fluid="md">
+    <Container className="my-3">
         <h1>{t('component')}</h1>
 
         <TSXSample title="Time Distance">
@@ -57,15 +52,13 @@ export const ComponentPage = observer(() => (
         </TSXSample>
 
         <TSXSample title="Rich-text editor (HTML)">
-            <Editor defaultValue="<p>test</p>" onChange={console.log} />
+            <Editor defaultValue="<p>test</p>" onChange={console.info} />
         </TSXSample>
 
-        <TSXSample title="Rich-text editor (JSON)">
-            <EditorJS name="content" defaultValue={RichEditData} />
-        </TSXSample>
-
-        <TSXSample title="Editor HTML">
-            <EditorHTML data={RichEditData} />
+        <TSXSample title="Markdown view">
+            <MarkdownView>
+                {'## Markdown demo\n\nRendered with **Idea React**.'}
+            </MarkdownView>
         </TSXSample>
     </Container>
 ));

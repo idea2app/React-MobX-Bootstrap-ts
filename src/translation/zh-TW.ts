@@ -9,6 +9,8 @@ export default {
     pagination: '分頁',
     chart: '圖表',
     downloader: '下載器',
+    pause: '暫停',
+    resume: '繼續',
     powered_by: '強力驅動自',
     documentation: '文檔',
     learn: '學習',
@@ -16,6 +18,7 @@ export default {
     deploy: '部署',
 
     // REST table
+    view: '查看',
     create: '新增',
     submit: '提交',
     cancel: '取消',

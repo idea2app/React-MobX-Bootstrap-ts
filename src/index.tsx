@@ -35,4 +35,4 @@ serviceWorker?.addEventListener('controllerchange', () =>
     window.location.reload()
 );
 
-createRoot(document.querySelector('#app')).render(<PageFrame />);
+createRoot(document.querySelector('#app')!).render(<PageFrame />);

@@ -1,6 +1,4 @@
-import { i18n } from './model/Translation';
-
-const { t } = i18n;
+import { t } from './model/Translation';
 
 export const mainNavLinks = () => [
     { href: '#/', title: t('home_page') },

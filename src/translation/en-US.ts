@@ -9,6 +9,8 @@ export default {
     pagination: 'Pagination',
     chart: 'Chart',
     downloader: 'Downloader',
+    pause: 'Pause',
+    resume: 'Resume',
     powered_by: 'Powered by',
     documentation: 'Documentation',
     learn: 'Learn',
@@ -16,6 +18,7 @@ export default {
     deploy: 'Deploy',
 
     // REST table
+    view: 'View',
     create: 'Create',
     submit: 'Submit',
     cancel: 'Cancel',
