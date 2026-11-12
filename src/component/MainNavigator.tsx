@@ -3,6 +3,7 @@ import {
     ComboboxOption,
     Container,
     Drawer,
+    Image,
     Navbar,
     NavbarBrand,
     NavbarNav,
@@ -61,7 +62,7 @@ export class MainNavigator extends Component {
             >
                 <Container>
                     <NavbarBrand href=".">
-                        <img
+                        <Image
                             className={`${style.logo} me-2`}
                             src="https://github.com/idea2app.png"
                             alt=""
@@ -77,7 +78,7 @@ export class MainNavigator extends Component {
 
                     <Drawer
                         className="w-100"
-                        bodyClassName="d-flex"
+                        bodyClassName="d-flex flex-column lg:flex-row gap-3"
                         title={document.title}
                         responsive="lg"
                         placement="end"

@@ -9,6 +9,8 @@ export default {
     pagination: 'Pagination',
     chart: 'Chart',
     downloader: 'Downloader',
+    pause: 'Pause',
+    resume: 'Resume',
     powered_by: 'Powered by',
     documentation: 'Documentation',
     learn: 'Learn',

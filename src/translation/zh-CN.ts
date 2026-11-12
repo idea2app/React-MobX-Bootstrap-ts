@@ -9,6 +9,8 @@ export default {
     pagination: '分页',
     chart: '图表',
     downloader: '下载器',
+    pause: '暂停',
+    resume: '继续',
     powered_by: '强力驱动自',
     documentation: '文档',
     learn: '学习',

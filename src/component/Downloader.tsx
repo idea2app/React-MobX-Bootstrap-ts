@@ -12,6 +12,7 @@ import { observer } from 'mobx-react';
 import { FC } from 'react';
 
 import { downloader } from '../model/service';
+import { t } from '../model/Translation';
 
 export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
     <Card>
@@ -34,24 +35,33 @@ export const DTCard: FC<{ task: DownloadTask }> = observer(({ task }) => (
                 {task.percent < 100 &&
                     (task.executing ? (
                         <Button
-                            size="sm"
+                            icon
+                            variant="solid"
                             theme="warning"
+                            size="sm"
+                            aria-label={t('pause')}
                             onClick={() => task.pause()}
                         >
                             <Icon name="pause" />
                         </Button>
                     ) : (
                         <Button
-                            size="sm"
+                            icon
+                            variant="solid"
                             theme="success"
+                            size="sm"
+                            aria-label={t('resume')}
                             onClick={() => task.start()}
                         >
                             <Icon name="play" />
                         </Button>
                     ))}
                 <Button
-                    size="sm"
+                    icon
+                    variant="solid"
                     theme="danger"
+                    size="sm"
+                    aria-label={t('delete')}
                     disabled={task.executing}
                     onClick={() => downloader.destroyTask(task.name)}
                 >

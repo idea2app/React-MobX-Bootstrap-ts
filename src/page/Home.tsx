@@ -15,9 +15,7 @@ import { Component } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-class-tools';
 
 import project, { Project } from '../model/Project';
-import { i18n } from '../model/Translation';
-
-const { t } = i18n;
+import { t } from '../model/Translation';
 
 @withRouter
 @observer
@@ -56,6 +54,7 @@ export class HomePage extends Component<
                 </CardBody>
                 <CardFooter className="d-flex justify-content-between">
                     <Button
+                        variant="solid"
                         theme="primary"
                         size="sm"
                         target="_blank"
@@ -64,6 +63,7 @@ export class HomePage extends Component<
                         {t('home_page')}
                     </Button>
                     <Button
+                        variant="solid"
                         theme="success"
                         size="sm"
                         target="_blank"

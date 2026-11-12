@@ -4,20 +4,19 @@ import {
     Form,
     FormControl,
     FormFloatingLabel,
-    FormLabel
+    FormLabel,
+    Icon
 } from 'idea-react';
 import { textJoin } from 'mobx-i18n';
 import { observer } from 'mobx-react';
-import { FC, FormEvent } from 'react';
+import { FC, SubmitEvent } from 'react';
 import { formToJSON } from 'web-utility';
 
 import { Downloader } from '../component/Downloader';
 import { downloader } from '../model/service';
-import { i18n } from '../model/Translation';
+import { t } from '../model/Translation';
 
-const { t } = i18n;
-
-const addTask = async (event: FormEvent<HTMLFormElement>) => {
+const addTask = async (event: SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -39,7 +38,7 @@ export const DownloaderPage: FC = observer(() => (
             onSubmit={addTask}
         >
             <FormFloatingLabel className="flex-fill">
-                <FormLabel htmlFor="download-url" plain>
+                <FormLabel plain htmlFor="download-url">
                     URL
                 </FormLabel>
                 <FormControl
@@ -51,7 +50,9 @@ export const DownloaderPage: FC = observer(() => (
                 />
             </FormFloatingLabel>
 
-            <Button type="submit">+</Button>
+            <Button type="submit" icon variant="solid" aria-label={t('create')}>
+                <Icon name="plus" />
+            </Button>
         </Form>
 
         <Downloader />

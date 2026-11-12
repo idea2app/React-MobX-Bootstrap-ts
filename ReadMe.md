@@ -11,7 +11,7 @@
 
 ## Technology stack
 
-- Language: [TypeScript v5][2]
+- Language: [TypeScript v6][2]
 - Component engine: [Preact v11][9] with React compatibility
 - State management: [MobX v7][3]
 - Component suite: [Idea React v3][10] on [Bootstrap v6][4]

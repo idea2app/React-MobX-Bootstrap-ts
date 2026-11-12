@@ -11,12 +11,8 @@ import {
 import { observer } from 'mobx-react';
 import { Editor } from 'react-bootstrap-editor';
 
-import { EditorJS } from '../component/Editor';
 import { TSXSample } from '../component/TSXSample';
-import RichEditData from '../model/rich-edit.json';
-import { i18n } from '../model/Translation';
-
-const { t } = i18n;
+import { t } from '../model/Translation';
 
 export const ComponentPage = observer(() => (
     <Container className="my-3">
@@ -57,10 +53,6 @@ export const ComponentPage = observer(() => (
 
         <TSXSample title="Rich-text editor (HTML)">
             <Editor defaultValue="<p>test</p>" onChange={console.info} />
-        </TSXSample>
-
-        <TSXSample title="Rich-text editor (JSON)">
-            <EditorJS defaultValue={RichEditData} />
         </TSXSample>
 
         <TSXSample title="Markdown view">
